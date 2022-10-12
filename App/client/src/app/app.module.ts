@@ -13,9 +13,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatRippleModule } from '@angular/material/core';
+import { ShopComponent } from './shop/shop.component';
+import { CardComponent } from './card/card.component';
+import { MatCardModule } from '@angular/material/card';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @NgModule({
-  declarations: [AppComponent, NavBarComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    NavBarComponent,
+    HomeComponent,
+    ShopComponent,
+    CardComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,6 +37,8 @@ import { MatRippleModule } from '@angular/material/core';
     MatIconModule,
     MatDividerModule,
     MatRippleModule,
+    MatCardModule,
+    BsDropdownModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

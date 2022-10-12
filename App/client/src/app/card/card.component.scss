@@ -1,0 +1,21 @@
+.example-card {
+  max-width: 400px;
+  margin-bottom: 8px;
+  padding: 0;
+  border-radius: 1em;
+}
+
+.add-to-cart {
+  background-color: #60d160;
+  width: 100%;
+}
+
+img {
+  border-radius: 1em;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+mat-card-content {
+  text-align: center;
+}

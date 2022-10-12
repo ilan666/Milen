@@ -13,5 +13,16 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: cornsilk;
+  background-color: #aaaaaa;
+}
+
+.mat-expansion-indicator::after {
+  color: cornsilk;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
 }

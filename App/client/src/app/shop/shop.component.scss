@@ -1,0 +1,94 @@
+.page-container {
+  width: 1300px;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 56px;
+  display: flex;
+  gap: 35px;
+  background-color: cornsilk;
+  // Translate to hebrew
+  flex-direction: row-reverse;
+}
+
+.store-content-container {
+  margin-left: 35px;
+  width: 100%;
+  // Translate to hebrew
+  text-align: end;
+}
+
+.header {
+  margin-bottom: 10px;
+  padding-right: 10px;
+  border-right: 10px solid #aaaaaa;
+}
+
+.men-header {
+  color: #171717;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.men-description {
+  color: #aaaaaa;
+  font-size: 20px;
+}
+
+.side-filter-container {
+  background-color: #171717;
+  border-radius: 2em;
+  height: 550px;
+  width: 250px;
+}
+
+.filter-list {
+  list-style: none;
+  display: flex;
+  // Translate to hebrew
+  flex-direction: row-reverse;
+  font-size: 22px;
+  gap: 100px;
+  border-bottom: 2px solid #aaaaaa;
+  padding-bottom: 10px;
+}
+
+.store-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 44px;
+  // Translate to hebrew
+  flex-direction: row-reverse;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-direction: row-reverse;
+}
+
+.dropdown-menu {
+  margin-top: 10px;
+  text-align: end;
+  background-color: #171717;
+}
+
+.dropdown-item {
+  font-size: 22px;
+  color: cornsilk;
+}
+
+.dropdown-item:hover {
+  background-color: #171717;
+}
+
+.menuitem {
+  padding: 15px;
+}
+
+.menuitem:hover {
+  border-right: 10px solid cornsilk;
+}

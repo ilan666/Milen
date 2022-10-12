@@ -1,5 +1,5 @@
 <header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top mat-elevation-z10">
     <a class="navbar-brand" href="#">Milen</a>
     <button
       class="navbar-toggler"
@@ -20,13 +20,13 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Store</a>
+          <a class="nav-link" routerLink="shop">Store</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
         </li>
       </ul>
-      <form class="form-inline mt-2 mt-md-0">
+      <!-- <form class="form-inline mt-2 mt-md-0">
         <input
           class="form-control mr-sm-2 search"
           type="text"
@@ -36,16 +36,16 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
           Search
         </button>
-      </form>
+      </form> -->
     </div>
     <button type="button" class="btn sidenavBtn" (click)="sideNav.toggle()">
-      <i class="fa fa-list-ul"></i>
+      <i class="fa-solid fa-bars"></i>
     </button>
 
     <!-- Using angular material to display side navigation options -->
 
     <div class="side-nav-container">
-      <mat-sidenav-container>
+      <mat-sidenav-container class="mat-elevation-z10">
         <!-- Content -->
         <mat-sidenav mode="side" #sideNav="matSidenav">
           <!-- Content goes here -->
@@ -54,33 +54,33 @@
             <mat-expansion-panel mat-ripple class="panel">
               <mat-expansion-panel-header>
                 <mat-panel-title class="panel-title">
-                  New Collection
+                  כל הקולקציה
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <ul>
-                <li>Test</li>
-                <li>Test</li>
-                <li>Test</li>
+                <li>דוגמה</li>
+                <li>דוגמה</li>
+                <li>דוגמה</li>
               </ul>
             </mat-expansion-panel>
             <mat-expansion-panel mat-ripple class="panel">
               <mat-expansion-panel-header>
-                <mat-panel-title class="panel-title"> Men </mat-panel-title>
+                <mat-panel-title class="panel-title"> גברים </mat-panel-title>
               </mat-expansion-panel-header>
               <ul>
-                <li>Test</li>
-                <li>Test</li>
-                <li>Test</li>
+                <li>דוגמה</li>
+                <li>דוגמה</li>
+                <li>דוגמה</li>
               </ul>
             </mat-expansion-panel>
             <mat-expansion-panel class="panel mat-elevation-z0" mat-ripple>
               <mat-expansion-panel-header>
-                <mat-panel-title class="panel-title"> Women </mat-panel-title>
+                <mat-panel-title class="panel-title"> נשים </mat-panel-title>
               </mat-expansion-panel-header>
               <ul>
-                <li>Test</li>
-                <li>Test</li>
-                <li>Test</li>
+                <li>דוגמה</li>
+                <li>דוגמה</li>
+                <li>דוגמה</li>
               </ul>
             </mat-expansion-panel>
           </mat-accordion>
