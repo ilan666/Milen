@@ -1,180 +1,120 @@
-<div class="page-container mat-elevation-z24">
+<div class="page-container">
   <div class="store-content-container">
     <header>
       <div class="header">
-        <h1 class="men-header">גברים</h1>
-        <p class="men-description">ראשי - כל הקולקציה - גברים</p>
-      </div>
-      <div class="filter-container">
-        <ul class="filter-list">
-          <li class="filter-list-item">
-            <div class="btn-group" dropdown placement="bottom right">
-              <button
-                id="button-animated"
-                dropdownToggle
-                type="button"
-                class="dropdown-button dropdown-toggle"
-                aria-controls="dropdown-animated"
-              >
-                סוג בגד <span class="caret"></span>
-              </button>
-              <ul
-                id="dropdown-animated"
-                *dropdownMenu
-                class="dropdown-menu dropdown-menu-right"
-                role="menu"
-                aria-labelledby="button-animated"
-              >
-                <li role="menuitem" class="menuitem">
-                  <a class="dropdown-item" href="#">דוגמה</a>
-                </li>
-                <li role="menuitem" class="menuitem">
-                  <a class="dropdown-item" href="#">דוגמה</a>
-                </li>
-                <li role="menuitem" class="menuitem">
-                  <a class="dropdown-item" href="#">דוגמה</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="filter-list-item">
-            <div class="btn-group" dropdown placement="bottom right">
-              <button
-                id="button-animated"
-                dropdownToggle
-                type="button"
-                class="dropdown-button dropdown-toggle"
-                aria-controls="dropdown-animated"
-              >
-                צבע <span class="caret"></span>
-              </button>
-              <ul
-                id="dropdown-animated"
-                *dropdownMenu
-                class="dropdown-menu dropdown-menu-right"
-                role="menu"
-                aria-labelledby="button-animated"
-              >
-                <li role="menuitem" class="menuitem">
-                  <a class="dropdown-item" href="#">דוגמה</a>
-                </li>
-                <li role="menuitem" class="menuitem">
-                  <a class="dropdown-item" href="#">דוגמה</a>
-                </li>
-                <li role="menuitem" class="menuitem">
-                  <a class="dropdown-item" href="#">דוגמה</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="filter-list-item">
-            <div class="btn-group" dropdown placement="bottom right">
-              <button
-                id="button-animated"
-                dropdownToggle
-                type="button"
-                class="dropdown-button dropdown-toggle"
-                aria-controls="dropdown-animated"
-              >
-                מידה <span class="caret"></span>
-              </button>
-              <ul
-                id="dropdown-animated"
-                *dropdownMenu
-                class="dropdown-menu dropdown-menu-right"
-                role="menu"
-                aria-labelledby="button-animated"
-              >
-                <li role="menuitem" class="menuitem">
-                  <a class="dropdown-item" href="#">דוגמה</a>
-                </li>
-                <li role="menuitem" class="menuitem">
-                  <a class="dropdown-item" href="#">דוגמה</a>
-                </li>
-                <li role="menuitem" class="menuitem">
-                  <a class="dropdown-item" href="#">דוגמה</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="filter-list-item">
-            <div class="btn-group" dropdown placement="bottom right">
-              <button
-                id="button-animated"
-                dropdownToggle
-                type="button"
-                class="dropdown-button dropdown-toggle"
-                aria-controls="dropdown-animated"
-              >
-                מחיר <span class="caret"></span>
-              </button>
-              <ul
-                id="dropdown-animated"
-                *dropdownMenu
-                class="dropdown-menu dropdown-menu-right"
-                role="menu"
-                aria-labelledby="button-animated"
-              >
-                <li role="menuitem" class="menuitem">
-                  <a class="dropdown-item" href="#">דוגמה</a>
-                </li>
-                <li role="menuitem" class="menuitem">
-                  <a class="dropdown-item" href="#">דוגמה</a>
-                </li>
-                <li role="menuitem" class="menuitem">
-                  <a class="dropdown-item" href="#">דוגמה</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="filter-list-item">
-            <div class="btn-group" dropdown placement="bottom right">
-              <button
-                id="button-animated"
-                dropdownToggle
-                type="button"
-                class="dropdown-button dropdown-toggle"
-                aria-controls="dropdown-animated"
-              >
-                גזרה <span class="caret"></span>
-              </button>
-              <ul
-                id="dropdown-animated"
-                *dropdownMenu
-                class="dropdown-menu dropdown-menu-right"
-                role="menu"
-                aria-labelledby="button-animated"
-              >
-                <li role="menuitem" class="menuitem">
-                  <a class="dropdown-item" href="#">דוגמה</a>
-                </li>
-                <li role="menuitem" class="menuitem">
-                  <a class="dropdown-item" href="#">דוגמה</a>
-                </li>
-                <li role="menuitem" class="menuitem">
-                  <a class="dropdown-item" href="#">דוגמה</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+        <h1 class="men-header">Men</h1>
+        <p class="men-description">
+          Make an <strong id="label">Impact</strong>
+        </p>
       </div>
     </header>
-    <section class="store-main">
+    <section class="store-content">
       <!-- Content goes here -->
       <app-card></app-card>
       <app-card></app-card>
       <app-card></app-card>
       <app-card></app-card>
+      <button class="btn2">
+        See all t-shirts
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="arrow-down"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
+            />
+          </svg>
+        </p>
+      </button>
+      <div class="img-right"></div>
+      <div class="desc-container-right">
+        <h1>T-shirts</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          animi aut sit quas nostrum, neque officiis, sed impedit possimus ipsa
+          error corporis ipsam totam explicabo alias consequatur eos! Placeat,
+          eum?
+        </p>
+      </div>
+    </section>
+    <section class="store-content">
+      <!-- Content goes here -->
+      <div class="img-left"></div>
+      <div class="desc-container-left">
+        <h1>T-shirts</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          animi aut sit quas nostrum, neque officiis, sed impedit possimus ipsa
+          error corporis ipsam totam explicabo alias consequatur eos! Placeat,
+          eum?
+        </p>
+      </div>
       <app-card></app-card>
       <app-card></app-card>
+      <app-card></app-card>
+      <app-card></app-card>
+      <button class="btn2">
+        See all t-shirts
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="arrow-down"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
+            />
+          </svg>
+        </p>
+      </button>
+    </section>
+    <section class="store-content">
+      <!-- Content goes here -->
+      <app-card></app-card>
+      <app-card></app-card>
+      <app-card></app-card>
+      <app-card></app-card>
+      <button class="btn2">
+        See all t-shirts
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="arrow-down"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
+            />
+          </svg>
+        </p>
+      </button>
+      <div class="img-right"></div>
+      <div class="desc-container-right">
+        <h1>T-shirts</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          animi aut sit quas nostrum, neque officiis, sed impedit possimus ipsa
+          error corporis ipsam totam explicabo alias consequatur eos! Placeat,
+          eum?
+        </p>
+      </div>
     </section>
   </div>
-  <aside>
-    <div class="side-filter-container mat-elevation-z10">
-      <p>Color</p>
-      <p>Size</p>
-      <p>Price</p>
-    </div>
-  </aside>
 </div>

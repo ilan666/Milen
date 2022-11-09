@@ -8,6 +8,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './nav-bar/login/login.component';
+import { RegisterComponent } from './nav-bar/register/register.component';
 // import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -17,6 +19,10 @@ import { ShopComponent } from './shop/shop.component';
 import { CardComponent } from './card/card.component';
 import { MatCardModule } from '@angular/material/card';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -25,19 +31,25 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     HomeComponent,
     ShopComponent,
     CardComponent,
+    ProductDetailsComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatExpansionModule,
     MatSidenavModule,
-    // MatToolbarModule,
+    MatFormFieldModule,
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
     MatRippleModule,
     MatCardModule,
+    ReactiveFormsModule,
     BsDropdownModule.forRoot(),
   ],
   providers: [],

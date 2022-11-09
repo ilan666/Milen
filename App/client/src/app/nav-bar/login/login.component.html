@@ -1,0 +1,52 @@
+<form
+  [formGroup]="loginForm"
+  *ngIf="!(currentUser$ | async)"
+  (ngSubmit)="login()"
+  autocomplete="off"
+>
+  <div class="login-container" #loginDisplay>
+    <h2 class="header">Log in</h2>
+    <div class="login-details-container">
+      <input
+        class="input"
+        formControlName="email"
+        type="email"
+        placeholder="Email here"
+      />
+      <input
+        class="input"
+        formControlName="password"
+        type="password"
+        placeholder="Password here"
+      />
+    </div>
+    <button
+      type="submit"
+      class="btn2"
+      mat-ripple
+      [matRippleCentered]="true"
+      [matRippleUnbounded]="false"
+    >
+      Submit
+    </button>
+    <hr />
+    <button
+      class="btn2"
+      routerLink="/register"
+      mat-ripple
+      [matRippleCentered]="true"
+      [matRippleUnbounded]="false"
+    >
+      Not a member
+      <div class="text-small">Sign me in &rarr;</div>
+    </button>
+    <a href="#" class="forgot-pass">Forgot password</a>
+  </div>
+</form>
+
+<!-- Features: -->
+<!-- 
+  Adter submitting - send messages if:
+  Email incorrent
+  Password incorrect
+ -->

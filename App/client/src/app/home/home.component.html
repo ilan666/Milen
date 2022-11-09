@@ -7,20 +7,7 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item">
-        <svg
-          class="bd-placeholder-img"
-          width="100%"
-          height="100%"
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label=" :  "
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title></title>
-          <rect width="100%" height="100%" fill="#777"></rect>
-          <text x="50%" y="50%" fill="#777" dy=".3em"></text>
-        </svg>
+        <!-- <div class="img"></div> -->
 
         <div class="container">
           <div class="carousel-caption text-left">
@@ -29,25 +16,19 @@
               Some representative placeholder content for the first slide of the
               carousel.
             </p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+            <button
+              class="btn2 align"
+              mat-ripple
+              [matRippleCentered]="true"
+              [matRippleUnbounded]="false"
+            >
+              Learn more
+            </button>
           </div>
         </div>
       </div>
       <div class="carousel-item active carousel-item-left">
-        <svg
-          class="bd-placeholder-img"
-          width="100%"
-          height="100%"
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label=" :  "
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title></title>
-          <rect width="100%" height="100%" fill="#777"></rect>
-          <text x="50%" y="50%" fill="#777" dy=".3em"></text>
-        </svg>
+        <!-- <img [src]="'./assets/Cloths_images/header.jpg'" alt="" /> -->
 
         <div class="container">
           <div class="carousel-caption">
@@ -56,25 +37,19 @@
               Some representative placeholder content for the second slide of
               the carousel.
             </p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            <button
+              class="btn2 align"
+              mat-ripple
+              [matRippleCentered]="true"
+              [matRippleUnbounded]="false"
+            >
+              Learn More
+            </button>
           </div>
         </div>
       </div>
       <div class="carousel-item carousel-item-next carousel-item-left">
-        <svg
-          class="bd-placeholder-img"
-          width="100%"
-          height="100%"
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label=" :  "
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title></title>
-          <rect width="100%" height="100%" fill="#777"></rect>
-          <text x="50%" y="50%" fill="#777" dy=".3em"></text>
-        </svg>
+        <!-- <img [src]="'./assets/Cloths_images/header.jpg'" alt="" /> -->
 
         <div class="container">
           <div class="carousel-caption text-right">
@@ -83,7 +58,14 @@
               Some representative placeholder content for the third slide of
               this carousel.
             </p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+            <button
+              class="btn2 align"
+              mat-ripple
+              [matRippleCentered]="true"
+              [matRippleUnbounded]="false"
+            >
+              Learn More
+            </button>
           </div>
         </div>
       </div>
@@ -114,8 +96,142 @@
 
   <div class="container marketing">
     <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
+
+    <!-- /.row -->
+
+    <div class="store-nav">
+      <div class="men-nav">
+        <button
+          class="btn2"
+          mat-ripple
+          [matRippleCentered]="true"
+          [matRippleUnbounded]="false"
+        >
+          Men Shop
+        </button>
+      </div>
+      <div class="women-nav">
+        <button
+          class="btn2"
+          mat-ripple
+          [matRippleCentered]="true"
+          [matRippleUnbounded]="false"
+        >
+          Women Shop
+        </button>
+      </div>
+      <div class="children-nav">
+        <button
+          class="btn2"
+          mat-ripple
+          [matRippleCentered]="true"
+          [matRippleUnbounded]="false"
+        >
+          Children Shop
+        </button>
+      </div>
+      <div class="accessories-nav">
+        <button
+          class="btn2"
+          mat-ripple
+          [matRippleCentered]="true"
+          [matRippleUnbounded]="false"
+        >
+          Accessories Shop
+        </button>
+      </div>
+    </div>
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider" />
+
+    <!-- <div class="row featurette">
+      <div class="col-md-7 right">
+        <h2 class="featurette-heading">
+          View our <span class="highlight-red">hottest</span> new collection
+          <p class="text-muted">It’ll blow your mind.</p>
+        </h2>
+        <p class="lead">
+          Some great placeholder content for the first featurette here. Imagine
+          some exciting prose here.
+        </p>
+        <button class="btn btn-featurette">Get me there! &rarr;</button>
+      </div>
+      <div class="col-md-5">
+        <img
+          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+          [src]="'./assets/Cloths_images/IMG-0090.jpg'"
+          width="500"
+          height="500"
+          role="img"
+          aria-label="Placeholder: 500x500"
+          preserveAspectRatio="xMidYMid slice"
+          focusable="false"
+        />
+      </div>
+    </div> -->
+
+    <!-- <hr class="featurette-divider" />
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2 left">
+        <h2 class="featurette-heading">
+          Oh yeah, it’s that good.
+          <span class="text-muted">See for yourself.</span>
+        </h2>
+        <p class="lead">
+          Another featurette? Of course. More placeholder content here to give
+          you an idea of how this layout would work with some actual real-world
+          content in place.
+        </p>
+        <button class="btn btn-featurette">Get me there! &rarr;</button>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img
+          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+          [src]="'./assets/Cloths_images/IMG-0093.jpg'"
+          width="500"
+          height="500"
+          role="img"
+          aria-label="Placeholder: 500x500"
+          preserveAspectRatio="xMidYMid slice"
+          focusable="false"
+        />
+      </div>
+    </div>
+
+    <hr class="featurette-divider" />
+
+    <div class="row featurette">
+      <div class="col-md-7 right-2">
+        <h2 class="featurette-heading">
+          And lastly, this one. <span class="text-muted">Checkmate.</span>
+        </h2>
+        <p class="lead">
+          And yes, this is the last block of representative placeholder content.
+          Again, not really intended to be actually read, simply here to give
+          you a better view of what this would look like with some actual
+          content. Your content.
+        </p>
+        <button class="btn btn-featurette">Get me there! &rarr;</button>
+      </div>
+      <div class="col-md-5">
+        <img
+          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+          [src]="'./assets/Cloths_images/IMG-0094.jpg'"
+          role="img"
+          aria-label="Placeholder: 500x500"
+          preserveAspectRatio="xMidYMid slice"
+          focusable="false"
+        />
+      </div>
+    </div> -->
+
+    <!-- <hr class="featurette-divider" /> -->
+
+    <!-- <div class="row"> -->
+    <!-- <div class="col-lg-4">
         <svg
           class="bd-placeholder-img rounded-circle"
           width="140"
@@ -137,9 +253,9 @@
           below the carousel. This is the first column.
         </p>
         <p><a class="btn btn-secondary" href="#">View details »</a></p>
-      </div>
-      <!-- /.col-lg-4 -->
-      <div class="col-lg-4">
+      </div> -->
+    <!-- /.col-lg-4 -->
+    <!-- <div class="col-lg-4">
         <svg
           class="bd-placeholder-img rounded-circle"
           width="140"
@@ -161,9 +277,9 @@
           we've moved on to the second column.
         </p>
         <p><a class="btn btn-secondary" href="#">View details »</a></p>
-      </div>
-      <!-- /.col-lg-4 -->
-      <div class="col-lg-4">
+      </div> -->
+    <!-- /.col-lg-4 -->
+    <!-- <div class="col-lg-4">
         <svg
           class="bd-placeholder-img rounded-circle"
           width="140"
@@ -185,47 +301,51 @@
           content.
         </p>
         <p><a class="btn btn-secondary" href="#">View details »</a></p>
-      </div>
-      <!-- /.col-lg-4 -->
-    </div>
-    <!-- /.row -->
+      </div> -->
+    <!-- /.col-lg-4 -->
+    <!-- </div> -->
 
-    <!-- START THE FEATURETTES -->
+    <!-- /END THE FEATURETTES -->
+  </div>
+  <!-- /.container -->
 
-    <hr class="featurette-divider" />
-
-    <div class="row featurette">
+  <div class="marketing-container">
+    <div class="row featurette right">
       <div class="col-md-7">
         <h2 class="featurette-heading">
-          First featurette heading.
-          <span class="text-muted">It’ll blow your mind.</span>
+          View our <span class="highlight-red">hottest</span> new collection
+          <p class="text-muted">It’ll blow your mind.</p>
         </h2>
         <p class="lead">
           Some great placeholder content for the first featurette here. Imagine
           some exciting prose here.
         </p>
+        <button
+          class="btn2 btn-featurette"
+          mat-ripple
+          [matRippleCentered]="true"
+          [matRippleUnbounded]="false"
+        >
+          Get me there! &rarr;
+        </button>
       </div>
       <div class="col-md-5">
-        <svg
+        <img
           class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+          [src]="'./assets/Cloths_images/IMG-0090.jpg'"
           width="500"
           height="500"
-          xmlns="http://www.w3.org/2000/svg"
           role="img"
           aria-label="Placeholder: 500x500"
           preserveAspectRatio="xMidYMid slice"
           focusable="false"
-        >
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#eee"></rect>
-          <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-        </svg>
+        />
       </div>
     </div>
 
     <hr class="featurette-divider" />
 
-    <div class="row featurette">
+    <div class="row featurette left">
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading">
           Oh yeah, it’s that good.
@@ -236,28 +356,32 @@
           you an idea of how this layout would work with some actual real-world
           content in place.
         </p>
+        <button
+          class="btn2 btn-featurette"
+          mat-ripple
+          [matRippleCentered]="true"
+          [matRippleUnbounded]="false"
+        >
+          Get me there! &rarr;
+        </button>
       </div>
       <div class="col-md-5 order-md-1">
-        <svg
+        <img
           class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+          [src]="'./assets/Cloths_images/IMG-0093.jpg'"
           width="500"
           height="500"
-          xmlns="http://www.w3.org/2000/svg"
           role="img"
           aria-label="Placeholder: 500x500"
           preserveAspectRatio="xMidYMid slice"
           focusable="false"
-        >
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#eee"></rect>
-          <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-        </svg>
+        />
       </div>
     </div>
 
     <hr class="featurette-divider" />
 
-    <div class="row featurette">
+    <div class="row featurette right-2">
       <div class="col-md-7">
         <h2 class="featurette-heading">
           And lastly, this one. <span class="text-muted">Checkmate.</span>
@@ -268,33 +392,30 @@
           you a better view of what this would look like with some actual
           content. Your content.
         </p>
+        <button
+          class="btn2 btn-featurette"
+          mat-ripple
+          [matRippleCentered]="true"
+          [matRippleUnbounded]="false"
+        >
+          Get me there! &rarr;
+        </button>
       </div>
       <div class="col-md-5">
-        <svg
+        <img
           class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-          width="500"
-          height="500"
-          xmlns="http://www.w3.org/2000/svg"
+          [src]="'./assets/Cloths_images/IMG-0094.jpg'"
           role="img"
           aria-label="Placeholder: 500x500"
           preserveAspectRatio="xMidYMid slice"
           focusable="false"
-        >
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#eee"></rect>
-          <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-        </svg>
+        />
       </div>
     </div>
-
-    <hr class="featurette-divider" />
-
-    <!-- /END THE FEATURETTES -->
   </div>
-  <!-- /.container -->
 
   <!-- FOOTER -->
-  <footer class="container">
+  <footer class="footer-container">
     <p class="float-right"><a href="#">Back to top</a></p>
     <p>
       © 2017-2022 Company, Inc. · <a href="#">Privacy</a> ·

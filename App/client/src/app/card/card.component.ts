@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
+  stars = 5
+
   constructor() { }
 
   ngOnInit(): void {

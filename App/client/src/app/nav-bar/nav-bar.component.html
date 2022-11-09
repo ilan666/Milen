@@ -1,6 +1,8 @@
 <header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top mat-elevation-z10">
-    <a class="navbar-brand" href="#">Milen</a>
+  <nav class="navbar navbar-expand-md fixed-top mat-elevation-z10">
+    <button type="button" class="btn sidenavBtn" (click)="sideNav.toggle()">
+      <i class="fa-solid fa-bars"></i>
+    </button>
     <button
       class="navbar-toggler"
       type="button"
@@ -14,18 +16,55 @@
     </button>
     <div class="navbar-collapse collapse navbar-list" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#"
-            >Home <span class="sr-only">(current)</span></a
-          >
+        <li class="nav-item" routerLink="/">
+          <a class="nav-link">All Collection</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="shop">Store</a>
+        <div class="nav-link-menu">
+          <a class="nav-menu-item">T-Shirts</a>
+          <a class="nav-menu-item">Jeans</a>
+          <a class="nav-menu-item">Hoodies</a>
+          <a class="nav-menu-item">Pants</a>
+          <a class="nav-menu-item">Shorts</a>
+          <a class="nav-menu-item">Socks</a>
+          <a class="nav-menu-item">Underwear</a>
+          <a class="nav-menu-item">Hats</a>
+          <a class="nav-menu-item">Shoes</a>
+          <a class="nav-menu-item">Accessories</a>
+          <img
+            [src]="'./assets/Cloths_images/IMG-0097.jpg'"
+            class="nav-menu-img-1"
+          />
+          <img
+            [src]="'./assets/Cloths_images/IMG-0097.jpg'"
+            class="nav-menu-img-2"
+          />
+        </div>
+        <li class="nav-item" routerLink="shop">
+          <a class="nav-link">Men</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+        <li class="nav-item" routerLink="/">
+          <a class="nav-link">Women</a>
+        </li>
+        <li class="nav-item" routerLink="/">
+          <a class="nav-link">Children</a>
         </li>
       </ul>
+
+      <!-- <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">All Collection</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="shop">Men</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Women</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Children</a>
+        </li>
+      </ul> -->
+
       <!-- <form class="form-inline mt-2 mt-md-0">
         <input
           class="form-control mr-sm-2 search"
@@ -38,9 +77,26 @@
         </button>
       </form> -->
     </div>
-    <button type="button" class="btn sidenavBtn" (click)="sideNav.toggle()">
-      <i class="fa-solid fa-bars"></i>
+    <button class="login-btn" (click)="toggleDisplay()">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="profile"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+          clip-rule="evenodd"
+        />
+      </svg>
     </button>
+
+    <app-login *ngIf="openLogin"></app-login>
+
+    <hr class="vertical" />
+
+    <a class="navbar-brand" routerLink="/">Milen</a>
 
     <!-- Using angular material to display side navigation options -->
 
@@ -48,39 +104,38 @@
       <mat-sidenav-container class="mat-elevation-z10">
         <!-- Content -->
         <mat-sidenav mode="side" #sideNav="matSidenav">
-          <!-- Content goes here -->
           <!-- Using MatExpansionPanel -->
           <mat-accordion>
-            <mat-expansion-panel mat-ripple class="panel">
+            <mat-expansion-panel class="panel">
               <mat-expansion-panel-header>
                 <mat-panel-title class="panel-title">
-                  כל הקולקציה
+                  All Collection
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <ul>
-                <li>דוגמה</li>
-                <li>דוגמה</li>
-                <li>דוגמה</li>
+                <li>Example</li>
+                <li>Example</li>
+                <li>Example</li>
               </ul>
             </mat-expansion-panel>
-            <mat-expansion-panel mat-ripple class="panel">
+            <mat-expansion-panel class="panel">
               <mat-expansion-panel-header>
-                <mat-panel-title class="panel-title"> גברים </mat-panel-title>
+                <mat-panel-title class="panel-title"> Men </mat-panel-title>
               </mat-expansion-panel-header>
               <ul>
-                <li>דוגמה</li>
-                <li>דוגמה</li>
-                <li>דוגמה</li>
+                <li>Example</li>
+                <li>Example</li>
+                <li>Example</li>
               </ul>
             </mat-expansion-panel>
-            <mat-expansion-panel class="panel mat-elevation-z0" mat-ripple>
+            <mat-expansion-panel class="panel">
               <mat-expansion-panel-header>
-                <mat-panel-title class="panel-title"> נשים </mat-panel-title>
+                <mat-panel-title class="panel-title"> Women </mat-panel-title>
               </mat-expansion-panel-header>
               <ul>
-                <li>דוגמה</li>
-                <li>דוגמה</li>
-                <li>דוגמה</li>
+                <li>Example</li>
+                <li>Example</li>
+                <li>Example</li>
               </ul>
             </mat-expansion-panel>
           </mat-accordion>

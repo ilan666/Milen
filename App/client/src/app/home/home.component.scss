@@ -1,5 +1,9 @@
 main {
-  background-color: cornsilk;
+  background: linear-gradient(to right, #000000, #434343);
+}
+
+.row {
+  margin: 0;
 }
 
 .carousel {
@@ -7,20 +11,41 @@ main {
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  bottom: 3rem;
+  bottom: 5rem;
+  left: 14rem;
+  right: 0;
+  max-width: 500px;
+  height: fit-content;
   z-index: 10;
+  padding: 3rem 6rem;
+
+  background-color: rgb(255, 249, 219, 0.7);
+  color: #343a40;
+
+  display: flex;
+  flex-direction: column;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 32rem;
+  height: 40rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/assets/Cloths_images/header.jpg);
+  margin-top: 76px;
+  background-size: 1519.2px 640px;
 }
 .carousel-item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 32rem;
+  height: 40rem;
+  opacity: 70%;
+}
+
+.align {
+  align-self: center;
+  font-size: 18px;
 }
 
 /* MARKETING CONTENT
@@ -30,9 +55,6 @@ main {
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
-}
-.marketing h2 {
-  font-weight: 400;
 }
 .marketing .col-lg-4 p {
   margin-right: 0.75rem;
@@ -46,13 +68,101 @@ main {
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */
 }
 
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -0.05rem;
+.right {
+  background: linear-gradient(to right, #fff9db, #93aba2);
+  box-shadow: 1px 1px 1px 1px #93aba2;
 }
 
+.right-2 {
+  background: linear-gradient(to right, #fff9db, #dbe5b5);
+}
+
+.left {
+  background: linear-gradient(to left, #fff9db, #cde0c0);
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.store-nav {
+  display: grid;
+  grid-template-columns: 637px 637px;
+  grid-template-rows: 648px 648px;
+  gap: 20px;
+}
+
+.men-nav {
+  background-image: url(https://images.squarespace-cdn.com/content/v1/5ac2a46ac258b40326620fb5/1565740444632-4SVEW0VTCOC1MJK8F43Q/ke17ZwdGBToddI8pDm48kNO2SymwcR0CNt03aX8zdCd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmyh-8_5GJNvrfz4o4yOfLS6zQbzUiTKHw9oGJVKerm66NTpMeMsHjVpXC93GFBavO/nyc-photographers-male-model-test-10031.jpg);
+}
+
+.women-nav {
+  background-image: url(https://th.bing.com/th/id/OIP.POSpbxx1R4Hl6QohI_b5EwHaLG?pid=ImgDet&rs=1);
+}
+
+.children-nav {
+  background-image: url(https://th.bing.com/th/id/OIP.MmRbh-3BIe3mIb0fAdevfwHaKp?pid=ImgDet&rs=1);
+}
+
+.accessories-nav {
+  background-image: url(https://th.bing.com/th/id/OIP.OW5m-GtvZFwzs8dV5ytWggHaDt?pid=ImgDet&rs=1);
+}
+
+.accessories-nav,
+.children-nav,
+.women-nav,
+.men-nav {
+  background-size: cover;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.featurette {
+  padding: 5rem 6rem;
+}
+
+.featurette-image {
+  width: 500px;
+  height: 500px;
+}
+
+.col-md-7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text-muted {
+  font-size: 40px;
+}
+
+.btn-featurette {
+  width: max-content;
+  font-size: 22px;
+}
+
+.store-nav div button {
+  margin-top: 480px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.highlight-red {
+  color: #dc2626;
+}
+
+.footer-container {
+  margin-top: 3rem;
+  background: linear-gradient(to right, #ffefba, #ffffff);
+  padding: 2rem 2rem;
+}
+
+.footer-container p:last-child {
+  margin: 0;
+}
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 

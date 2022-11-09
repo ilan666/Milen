@@ -2,93 +2,119 @@
   width: 1300px;
   padding: 10px;
   margin: 0 auto;
-  margin-top: 56px;
+  padding-top: 76px;
   display: flex;
   gap: 35px;
-  background-color: cornsilk;
-  // Translate to hebrew
-  flex-direction: row-reverse;
+  background: linear-gradient(to right, #ffefba, #ffffff);
 }
 
 .store-content-container {
-  margin-left: 35px;
+  margin: 0 35px;
   width: 100%;
-  // Translate to hebrew
-  text-align: end;
 }
 
 .header {
-  margin-bottom: 10px;
-  padding-right: 10px;
-  border-right: 10px solid #aaaaaa;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  border-left: 10px solid #adb5bd;
+  border-right: 10px solid #adb5bd;
+  background-image: url(/assets/men-shop-header.jpg);
+  background-size: cover;
+  padding: 10rem 10rem 10rem 5rem;
 }
 
 .men-header {
-  color: #171717;
+  color: #e9ecef;
   font-size: 42px;
   font-weight: bold;
+  font-family: serif;
+}
+
+#label {
+  color: #dc2626;
 }
 
 .men-description {
-  color: #aaaaaa;
+  color: #adb5bd;
   font-size: 20px;
 }
 
-.side-filter-container {
-  background-color: #171717;
-  border-radius: 2em;
+.store-content {
+  display: grid;
+  grid-template-columns: repeat(4, 240px);
+  grid-template-rows: repeat(2, 406px) 58px;
+
+  column-gap: 83px;
+  row-gap: 41.5px;
+}
+
+.img-right {
+  grid-row: 1 / 3;
+  grid-column: 3 / 5;
+  background-image: url(/assets/men-tshirtsection.jpg);
+  background-size: cover;
   height: 550px;
-  width: 250px;
 }
 
-.filter-list {
-  list-style: none;
-  display: flex;
-  // Translate to hebrew
+.img-left {
+  grid-row: 1 / 3;
+  grid-column: 1 / 3;
+  background-image: url(/assets/men-tshirtsection.jpg);
+  background-size: cover;
+  height: 550px;
+}
+
+.btn2 p {
+  margin: 0;
+}
+
+.arrow-down {
+  height: 18px;
+}
+
+.btn2 {
+  font-size: 20px;
+  padding: 8px 24px;
+  grid-column: 1/3;
+  margin: auto;
+}
+
+section {
+  padding: 70px 0px;
+  border-bottom: 1px solid #ced4da;
+}
+
+.desc-container-right {
+  grid-column: 3/5;
+  grid-row: 2/3;
+  margin-top: 220px;
+  text-align: center;
+}
+
+.desc-container-left {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  margin-top: 220px;
+  text-align: center;
+}
+
+.desc-container-right h1,
+.desc-container-left h1 {
+  font-size: 52px;
+  margin-bottom: 52px;
+}
+
+.desc-container-right p,
+.desc-container-left p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1,
+p {
+  font-family: serif !important;
+}
+
+.reverse {
   flex-direction: row-reverse;
-  font-size: 22px;
-  gap: 100px;
-  border-bottom: 2px solid #aaaaaa;
-  padding-bottom: 10px;
-}
-
-.store-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 44px;
-  // Translate to hebrew
-  flex-direction: row-reverse;
-}
-
-.dropdown-button {
-  background: none;
-  border: none;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  flex-direction: row-reverse;
-}
-
-.dropdown-menu {
-  margin-top: 10px;
-  text-align: end;
-  background-color: #171717;
-}
-
-.dropdown-item {
-  font-size: 22px;
-  color: cornsilk;
-}
-
-.dropdown-item:hover {
-  background-color: #171717;
-}
-
-.menuitem {
-  padding: 15px;
-}
-
-.menuitem:hover {
-  border-right: 10px solid cornsilk;
 }

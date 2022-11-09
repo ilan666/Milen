@@ -12,8 +12,8 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: #aaaaaa;
+  color: #343a40;
+  background: linear-gradient(to right, #000000, #434343);
 }
 
 .mat-expansion-indicator::after {
@@ -24,5 +24,27 @@ body {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  font-family: sans-serif;
+  font-family: serif;
+}
+
+.btn2 {
+  background-color: #ff6b6b;
+  border: none;
+  color: #fff9db;
+  padding: 16px 32px;
+  width: max-content;
+  height: max-content;
+  transition: all 0.1s ease-in-out;
+}
+
+.btn2:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  background-color: #ffa8a8;
+}
+
+.btn2:active {
+  transform: scale(1);
+  box-shadow: none;
 }
