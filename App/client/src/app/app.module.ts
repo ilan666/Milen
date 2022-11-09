@@ -15,7 +15,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatRippleModule } from '@angular/material/core';
-import { ShopComponent } from './shop/shop.component';
 import { CardComponent } from './card/card.component';
 import { MatCardModule } from '@angular/material/card';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -23,17 +22,24 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MenComponent } from './StoreComponents/men/men.component';
+import { WomenComponent } from './StoreComponents/women/women.component';
+import { AllCollectionComponent } from './StoreComponents/allCollection/allCollection.component';
+import { ChildrenComponent } from './StoreComponents/children/children.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     HomeComponent,
-    ShopComponent,
     CardComponent,
     ProductDetailsComponent,
     LoginComponent,
     RegisterComponent,
+    MenComponent,
+    WomenComponent,
+    AllCollectionComponent,
+    ChildrenComponent,
   ],
   imports: [
     BrowserModule,
