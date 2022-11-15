@@ -1,17 +1,40 @@
 <div class="container">
-  <div class="col-1">
+  <div class="header-container">
     <h1 class="product-header">Shirt</h1>
     <h3 class="product-desc">Look sharper</h3>
-    <img class="img" [src]="'./assets/Cloths_images/IMG-0091.jpg'" alt="" />
   </div>
-  <div class="col-2">
+  <img class="img" [src]="'./assets/Cloths_images/IMG-0091.jpg'" alt="" />
+  <div class="custom-continer">
     <h4>Choose size</h4>
     <div class="flex-container">
-      <strong>XS</strong>
-      <strong>S</strong>
-      <strong>M</strong>
-      <strong>L</strong>
-      <strong>XL</strong>
+      <strong class="size-item">XS</strong>
+      <strong class="size-item">S</strong>
+      <strong class="size-item">M</strong>
+      <strong class="size-item">L</strong>
+      <strong class="size-item">XL</strong>
     </div>
   </div>
+  <div class="checkout-container">
+    <div class="flex-container buttons">
+      <button class="btn--modifier">Add to cart</button>
+      <button class="btn--modifier">Buy now</button>
+    </div>
+  </div>
+
+  <button class="close">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M6 18L18 6M6 6l12 12"
+      />
+    </svg>
+  </button>
 </div>

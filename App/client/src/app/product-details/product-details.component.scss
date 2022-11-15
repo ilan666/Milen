@@ -1,16 +1,101 @@
+/////////////////////////////////////////
+//    Milen Website color selection    //
+// Copy this for every .sass component //
+/////////////////////////////////////////
+$primary-color-black: #171717;
+$primary-color-gradient: #000000, #434343;
+
+$sec-color-bisque: #fff9db;
+$sec-color-gradient: #ffefba, #ffffff;
+
+$grey-color: #e9ecef;
+$text-color: #343a40;
+
+$website-font: "Source Serif Pro", serif;
+$header-margin: 5.5rem;
+/////////////////////////////////////////
+/// 1rem = 10px ///
+///////////////////
+
 .img {
-  height: 250px;
-  width: 250px;
+  height: 40rem;
+  width: 40rem;
+
+  grid-row: 2/3;
 }
 
 .container {
-  background: white;
-  width: 1100px;
-  height: 600px;
-  margin: 7rem auto;
+  background: $sec-color-bisque;
+  width: max-content;
+  height: 60rem;
+  margin: 13rem auto;
   border-radius: 5px;
-  padding: 32px 64px;
+  padding: 3rem 6.3rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 64px;
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 6.5rem;
+  position: relative;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.size-item {
+  transition: all 0.2s ease-in-out;
+  width: 4rem;
+  padding: 1rem;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #d3f9d8;
+  }
+}
+
+h4 {
+  text-align: center;
+}
+
+.checkout-container {
+  position: relative;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 70%;
+  transform: translateX(-50%);
+}
+
+.close {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  background-color: $sec-color-bisque;
+  border: none;
+  border-radius: 5rem;
+  top: -2rem;
+  right: -2rem;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    background-color: $primary-color-black;
+  }
+}
+
+.close {
+  svg {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.product-header {
+  font-size: 6.5rem;
 }

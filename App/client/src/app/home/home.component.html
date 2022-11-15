@@ -1,94 +1,20 @@
 <main role="main">
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-      <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-      <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item">
-        <!-- <div class="img"></div> -->
-
-        <div class="container">
-          <div class="carousel-caption text-left">
-            <h1>Example headline.</h1>
-            <p>
-              Some representative placeholder content for the first slide of the
-              carousel.
-            </p>
-            <button
-              class="btn2 align"
-              mat-ripple
-              [matRippleCentered]="true"
-              [matRippleUnbounded]="false"
-            >
-              Learn more
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item active carousel-item-left">
-        <!-- <img [src]="'./assets/Cloths_images/header.jpg'" alt="" /> -->
-
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>
-              Some representative placeholder content for the second slide of
-              the carousel.
-            </p>
-            <button
-              class="btn2 align"
-              mat-ripple
-              [matRippleCentered]="true"
-              [matRippleUnbounded]="false"
-            >
-              Learn More
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item carousel-item-next carousel-item-left">
-        <!-- <img [src]="'./assets/Cloths_images/header.jpg'" alt="" /> -->
-
-        <div class="container">
-          <div class="carousel-caption text-right">
-            <h1>One more for good measure.</h1>
-            <p>
-              Some representative placeholder content for the third slide of
-              this carousel.
-            </p>
-            <button
-              class="btn2 align"
-              mat-ripple
-              [matRippleCentered]="true"
-              [matRippleUnbounded]="false"
-            >
-              Learn More
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button
-      class="carousel-control-prev"
-      type="button"
-      data-target="#myCarousel"
-      data-slide="prev"
-    >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </button>
-    <button
-      class="carousel-control-next"
-      type="button"
-      data-target="#myCarousel"
-      data-slide="next"
-    >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </button>
-  </div>
+  <header class="header">
+    <div class="img-container"></div>
+    <!-- <div class="header-caption">
+      <h1>Exclusive winter sale!</h1>
+      <p>Dress up with the newest winter collection</p>
+      <p class="discount">Up to 50%!</p>
+      <button
+        class="btn--modifier"
+        mat-ripple
+        [matRippleCentered]="true"
+        [matRippleUnbounded]="false"
+      >
+        Get me there
+      </button>
+    </div> -->
+  </header>
 
   <!-- Marketing messaging and featurettes
     ================================================== -->
@@ -100,9 +26,9 @@
     <!-- /.row -->
 
     <div class="store-nav">
-      <div class="men-nav">
+      <div class="men-nav img">
         <button
-          class="btn2"
+          class="btn--modifier"
           mat-ripple
           [matRippleCentered]="true"
           [matRippleUnbounded]="false"
@@ -110,9 +36,9 @@
           Men Shop
         </button>
       </div>
-      <div class="women-nav">
+      <div class="women-nav img">
         <button
-          class="btn2"
+          class="btn--modifier"
           mat-ripple
           [matRippleCentered]="true"
           [matRippleUnbounded]="false"
@@ -120,19 +46,19 @@
           Women Shop
         </button>
       </div>
-      <div class="children-nav">
+      <!-- <div class="children-nav img">
         <button
-          class="btn2"
+          class="btn--modifier"
           mat-ripple
           [matRippleCentered]="true"
           [matRippleUnbounded]="false"
         >
           Children Shop
         </button>
-      </div>
-      <div class="accessories-nav">
+      </div> -->
+      <div class="accessories-nav img">
         <button
-          class="btn2"
+          class="btn--modifier"
           mat-ripple
           [matRippleCentered]="true"
           [matRippleUnbounded]="false"
@@ -321,7 +247,7 @@
           some exciting prose here.
         </p>
         <button
-          class="btn2 btn-featurette"
+          class="btn--modifier btn-featurette"
           mat-ripple
           [matRippleCentered]="true"
           [matRippleUnbounded]="false"
@@ -331,7 +257,7 @@
       </div>
       <div class="col-md-5">
         <img
-          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+          class="bd-placeholder-img bd-placeholder-img-lg img img--modifier img-fluid mx-auto"
           [src]="'./assets/Cloths_images/IMG-0090.jpg'"
           width="500"
           height="500"
@@ -357,7 +283,7 @@
           content in place.
         </p>
         <button
-          class="btn2 btn-featurette"
+          class="btn--modifier btn-featurette"
           mat-ripple
           [matRippleCentered]="true"
           [matRippleUnbounded]="false"
@@ -367,7 +293,7 @@
       </div>
       <div class="col-md-5 order-md-1">
         <img
-          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+          class="bd-placeholder-img bd-placeholder-img-lg img img--modifier img-fluid mx-auto"
           [src]="'./assets/Cloths_images/IMG-0093.jpg'"
           width="500"
           height="500"
@@ -393,7 +319,7 @@
           content. Your content.
         </p>
         <button
-          class="btn2 btn-featurette"
+          class="btn--modifier btn-featurette"
           mat-ripple
           [matRippleCentered]="true"
           [matRippleUnbounded]="false"
@@ -403,7 +329,7 @@
       </div>
       <div class="col-md-5">
         <img
-          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+          class="bd-placeholder-img bd-placeholder-img-lg img img--modifier img-fluid mx-auto"
           [src]="'./assets/Cloths_images/IMG-0094.jpg'"
           role="img"
           aria-label="Placeholder: 500x500"

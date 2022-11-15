@@ -1,39 +1,54 @@
+/////////////////////////////////////////
+//    Milen Website color selection    //
+// Copy this for every .sass component //
+/////////////////////////////////////////
+$primary-color-black: #171717;
+$primary-color-gradient: #000000, #434343;
+
+$sec-color-bisque: #fff9db;
+$sec-color-gradient: #ffefba, #ffffff;
+
+$grey-color: #e9ecef;
+
+$website-font: "Source Serif Pro", serif;
+$header-margin: 5.5rem;
+/////////////////////////////////////////
+/// 1rem = 10px ///
+///////////////////
+
+// Store components are the same
+// Only difference is images
+
 .page-container {
-  width: 1300px;
-  padding: 10px;
+  width: 130rem;
+  padding: 1rem;
   margin: 0 auto;
-  padding-top: 76px;
+  padding-top: 8rem;
   display: flex;
-  gap: 35px;
-  background: linear-gradient(to right, #ffefba, #ffffff);
+  gap: 3.5rem;
+  background: linear-gradient(to right, $sec-color-gradient);
 }
 
 .store-content-container {
-  margin: 0 35px;
+  margin: 0 3.5rem;
   width: 100%;
 }
 
 .header-container {
-  margin-bottom: 30px;
-  padding-left: 10px;
-  border-left: 10px solid #adb5bd;
-  border-right: 10px solid #adb5bd;
-  // Delete background 0color after adding original photo
-  background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0)
-    ),
-    url(/assets/WomenStoreImgs/header.jpg);
+  margin-bottom: 3.5rem;
+  padding-left: 1rem;
+  border-left: 1rem solid $grey-color;
+  border-right: 1rem solid $grey-color;
+  background-image: url(/assets/WomenStoreImgs/header.jpg);
   background-size: cover;
-  padding: 10rem 10rem 10rem 5rem;
+  padding: 12rem 10rem 12rem 5rem;
 }
 
 .header {
-  color: #e9ecef;
-  font-size: 42px;
+  color: $grey-color;
+  font-size: 4rem;
   font-weight: bold;
-  font-family: serif;
+  font-family: $website-font;
 }
 
 #label {
@@ -41,13 +56,13 @@
 }
 
 .description {
-  color: #adb5bd;
-  font-size: 20px;
+  color: $grey-color;
+  font-size: 2rem;
 }
 
 .store-content {
   display: grid;
-  grid-template-columns: repeat(4, 240px);
+  grid-template-columns: repeat(4, 24rem);
   grid-template-rows: repeat(2, 406px) 58px;
 
   column-gap: 83px;
@@ -59,8 +74,7 @@
   grid-column: 3 / 5;
   background-image: url(/assets/WomenStoreImgs/tshirt.jpg);
   background-size: cover;
-  height: 550px;
-  border-radius: 5px;
+  height: 55rem;
 }
 
 .img-left {
@@ -68,77 +82,84 @@
   grid-column: 1 / 3;
   background-image: url(/assets/WomenStoreImgs/tshirt.jpg);
   background-size: cover;
-  height: 550px;
-  border-radius: 5px;
+  height: 55rem;
 }
 
-.btn2 p {
-  margin: 0;
+.btn--modifier {
+  p {
+    margin: 0;
+  }
 }
 
-.arrow-down {
-  height: 18px;
+.arrow-down-icon {
+  height: 1.5rem;
 }
 
-.btn2 {
-  font-size: 20px;
-  padding: 8px 24px;
+.btn--modifier {
+  font-size: 2rem;
+  padding: 1rem 2.5rem;
   grid-column: 1/3;
   margin: auto;
 }
 
 section {
-  padding: 70px 0px;
-  border-bottom: 1px solid #ced4da;
+  padding: 7rem 0px;
+  border-bottom: 1px solid $grey-color;
 }
 
+////////////////////
+/// Custom mixin ///
+////////////////////
+@mixin align-and-margin-containers {
+  margin-top: 22rem;
+  text-align: center;
+}
 .desc-container-right {
   grid-column: 3/5;
   grid-row: 2/3;
-  margin-top: 220px;
-  text-align: center;
+  @include align-and-margin-containers;
 }
 
 .desc-container-left {
   grid-column: 1/3;
   grid-row: 2/3;
-  margin-top: 220px;
-  text-align: center;
+  @include align-and-margin-containers;
+}
+////////////////////
+
+.desc-container-right,
+.desc-container-left {
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 5rem;
+  }
 }
 
-.desc-container-right h1,
-.desc-container-left h1 {
-  font-size: 52px;
-  margin-bottom: 52px;
-}
-
-.desc-container-right p,
-.desc-container-left p {
-  font-size: 16px;
-  line-height: 1.5;
+.desc-container-right,
+.desc-container-left {
+  p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
 }
 
 h1,
 p {
-  font-family: serif !important;
+  font-family: $website-font !important;
 }
 
-.reverse {
-  flex-direction: row-reverse;
-}
-
-// Navbar temporary template
 .navbar-item {
   padding: 16px 0;
   text-align: center;
   width: 12.5%;
   font-size: 20px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $primary-color-black;
   transition: all 0.2s ease-in-out;
 }
 
 .navbar-item:hover {
-  padding: 6px 0;
-  border-bottom: 10px solid;
+  padding: 11px 0;
+  border-bottom: 7px solid $grey-color;
+  color: $grey-color;
   cursor: pointer;
 }

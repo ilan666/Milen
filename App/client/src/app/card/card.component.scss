@@ -1,82 +1,64 @@
+/////////////////////////////////////////
+//    Milen Website color selection    //
+// Copy this for every .sass component //
+/////////////////////////////////////////
+$primary-color-black: #171717;
+$primary-color-gradient: #000000, #434343;
+
+$sec-color-bisque: #fff9db;
+$sec-color-gradient: #ffefba, #ffffff;
+
+$grey-color: #e9ecef;
+$text-color: #343a40;
+
+$website-font: "Source Serif Pro", serif;
+$header-margin: 5.5rem;
+/////////////////////////////////////////
+/// 1rem = 10px ///
+///////////////////
+
 .example-card {
-  max-width: 400px;
+  max-width: 40rem;
   padding: 0;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   box-shadow: none;
   background: none;
   transition: all 0.2s ease-in-out;
   position: relative;
+  background-color: $grey-color;
 }
 
 .example-card:hover {
+  transform: translateY(-2px);
   box-shadow: 0px 8px 9px -5px rgb(0 0 0 / 20%),
     0px 8px 10px 1px rgb(0 0 0 / 0%), 0px 3px 14px 2px rgb(0 0 0 / 8%);
   cursor: pointer;
-  background-color: #e9ecef;
-}
-
-.add-to-cart {
-  background-color: #60d160;
-  width: 100%;
 }
 
 mat-card-content {
   text-align: left;
-  padding-top: 35px;
 }
 
 h4 {
-  font-size: 18px;
-}
-
-.color_list {
-  display: flex;
-  gap: 10px;
-  list-style: none;
-  justify-content: center;
-  padding: 0;
+  font-size: 2rem;
 }
 
 .img {
-  height: 290px;
-  border-radius: 5px;
+  height: 25rem;
+  border-radius: 0.5rem;
   background-image: url(/assets/Cloths_images/IMG-0090.jpg);
   background-size: cover;
   margin: 0 !important;
 }
 
-.add-btn {
-  background-color: #e9ecef;
-  width: 200px;
-  padding: 12px 0px;
-  border: 1px solid;
+.btn--modifier {
+  width: 100%;
+  background-color: inherit;
   text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
-  border: none;
-  border-radius: 5px;
-
-  position: absolute;
-  top: 280px;
-  left: 20px;
-  right: 20px;
-}
-
-.example-card:hover .add-btn {
-  background-color: #212529;
-  color: #fff9db;
-}
-
-.add-btn:hover {
-  background-color: #8ce99a !important;
-  color: #fff9db;
-}
-
-.add-btn:active {
-  background-color: #adb5bd;
+  font-family: $website-font;
 }
 
 .sub-header {
-  font-family: serif;
   margin: 0;
 }
 
@@ -84,8 +66,10 @@ h4 {
   height: 16px;
 }
 
-#stars span {
-  margin-left: 4px;
+#stars {
+  span {
+    margin-left: 4px;
+  }
 }
 
 #stars {
@@ -93,7 +77,4 @@ h4 {
   font-size: 13px;
   display: flex;
   gap: 1px;
-}
-
-.price {
 }

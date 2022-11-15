@@ -5,46 +5,82 @@
 
 /* Importing Datepicker SCSS file. */
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600&display=swap");
+
+/////////////////////////////////////////
+//    Milen Website color selection    //
+// Copy this for every .sass component //
+/////////////////////////////////////////
+$primary-color-black: #171717;
+$primary-color-gradient: #000000, #434343;
+
+$sec-color-bisque: #fff9db;
+$sec-color-gradient: #ffefba, #ffffff;
+
+$grey-color: #e9ecef;
+
+$website-font: "Source Serif Pro", serif;
+$header-margin: 5.5rem;
+/////////////////////////////////////////
+/// 1rem = 10px ///
+///////////////////
 
 html,
 body {
   height: 100%;
+  font-size: 62.5%;
 }
 body {
-  margin: 0;
-  color: #343a40;
-  background: linear-gradient(to right, #000000, #434343);
-}
-
-.mat-expansion-indicator::after {
-  color: cornsilk;
-}
-
-* {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  font-family: serif;
+  color: #343a40;
+  background: linear-gradient(to right, $primary-color-gradient);
 }
 
-.btn2 {
-  background-color: #ff6b6b;
-  border: none;
-  color: #fff9db;
+.img {
+  border-radius: 0.5rem;
+  background-size: cover;
+}
+
+body,
+.mat-typography,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: $website-font !important;
+}
+
+.mat-expansion-indicator::after {
+  color: $sec-color-bisque;
+}
+
+.btn--modifier {
+  background-color: transparent;
+  border: 1px solid $primary-color-black;
+  color: $primary-color-black;
   padding: 16px 32px;
   width: max-content;
   height: max-content;
+  border-radius: 5px;
   transition: all 0.1s ease-in-out;
-}
 
-.btn2:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
-    0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
-  background-color: #ffa8a8;
-}
+  &:hover {
+    background-color: $primary-color-black;
+    border-color: $grey-color;
+    color: $grey-color;
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 9px -5px rgb(0 0 0 / 20%),
+      0px 8px 10px 1px rgb(0 0 0 / 0%), 0px 3px 14px 2px rgb(0 0 0 / 8%);
+  }
 
-.btn2:active {
-  transform: scale(1);
-  box-shadow: none;
+  &:active {
+    background: lighten($color: $primary-color-black, $amount: 10);
+    transform: translateY(-1px);
+    box-shadow: 0px 1px 10px 0px rgba(73, 80, 87, 0.4);
+  }
 }

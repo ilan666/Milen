@@ -1,21 +1,46 @@
+/////////////////////////////////////////
+//    Milen Website color selection    //
+// Copy this for every .sass component //
+/////////////////////////////////////////
+$primary-color-black: #171717;
+$primary-color-gradient: #000000, #434343;
+
+$sec-color-bisque: #fff9db;
+$sec-color-gradient: #ffefba, #ffffff;
+
+$grey-color: #e9ecef;
+$text-color: #343a40;
+
+$website-font: "Source Serif Pro", serif;
+$header-margin: 5.5rem;
+/////////////////////////////////////////
+/// 1rem = 10px ///
+///////////////////
+
 form {
   margin-top: 10rem;
 }
 
-.container {
+////////////////////
+/// Custom Mixin ///
+////////////////////
+@mixin flex-and-column {
   display: flex;
   flex-direction: column;
+}
+.container {
   align-items: center;
   width: fit-content;
   padding: 32px 64px;
-  background: linear-gradient(to right, #ffefba, #ffffff);
-  color: #343a40;
+  background: linear-gradient(to right, $sec-color-gradient);
+  color: $text-color;
+  @include flex-and-column;
 }
 
 .input-container {
-  display: flex;
-  flex-direction: column;
+  @include flex-and-column;
 }
+////////////////////
 
 h1 {
   margin-bottom: 32px;
@@ -27,8 +52,8 @@ h1 {
   width: 260px;
   padding: 10px;
   border: none;
-  background: linear-gradient(to right, #000000, #434343);
-  color: #ffefba;
+  background: linear-gradient(to right, $primary-color-gradient);
+  color: $sec-color-bisque;
   transition: all 0.2s ease-in-out;
 }
 
@@ -38,9 +63,9 @@ h1 {
     0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
 }
 
-.btn2 {
-  color: #ffefba;
-  background: linear-gradient(to right, #000000, #434343);
+.btn--modifier {
+  color: $sec-color-bisque;
+  background: linear-gradient(to right, $primary-color-gradient);
   padding: 8px 22px;
   margin-bottom: 16px;
   font-size: 16px;

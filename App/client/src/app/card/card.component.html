@@ -80,7 +80,13 @@
     <h1 class="sub-header">(T-Shirt)</h1>
     <p class="price">(Price)</p>
   </mat-card-content>
-  <button class="add-btn" (click)="$event.stopPropagation()">
+  <button
+    class="btn--modifier"
+    (click)="$event.stopPropagation()"
+    mat-ripple
+    [matRippleCentered]="true"
+    [matRippleUnbounded]="false"
+  >
     Add to cart
   </button>
 </mat-card>

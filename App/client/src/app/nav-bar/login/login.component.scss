@@ -1,63 +1,90 @@
-.login-container {
-  background: linear-gradient(to right, #ffefba, #ffffff);
-  position: absolute;
-  top: 92px;
-  // opacity: 0%;
-  right: 16px;
+/////////////////////////////////////////
+//    Milen Website color selection    //
+// Copy this for every .sass component //
+/////////////////////////////////////////
+$primary-color-black: #171717;
+$primary-color-gradient: #000000, #434343;
 
-  padding: 52px 32px;
-  color: #343a40;
+$sec-color-bisque: #fff9db;
+$sec-color-gradient: #ffefba, #ffffff;
+
+$grey-color: #e9ecef;
+$text-color: #343a40;
+
+$website-font: "Source Serif Pro", serif;
+$header-margin: 5.5rem;
+/////////////////////////////////////////
+/// 1rem = 10px ///
+///////////////////
+
+.login-container {
+  background: linear-gradient(to right, $sec-color-gradient);
+  position: absolute;
+  top: $header-margin + 1.5rem;
+  left: 1.5rem;
+  margin-right: 1.5rem;
+
+  padding: 5rem 3rem;
+  color: $text-color;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  // transition: all 0.2s ease-in-out;
+  border-radius: 0.5rem;
+
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .header {
-  font-size: 24px;
-  margin-bottom: 32px;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
 }
-
-// .login-details-container {
-//   height: 128px;
-// }
 
 .input {
   display: block;
-  width: 260px;
-  padding: 10px;
+  width: 26rem;
+  padding: 1rem;
   border: none;
-  background: linear-gradient(to right, #000000, #434343);
-  color: #ffefba;
-  margin-bottom: 16px;
+  background: linear-gradient(to right, $primary-color-gradient);
+  color: $sec-color-bisque;
+  margin-bottom: 1.5rem;
   transition: all 0.2s ease-in-out;
 }
 
 .input:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 5px 5px 2px rgb(0 0 0 / 10%),
-    0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+  transform: scale(1.01);
+  box-shadow: 0px 5px 5px 2px rgb(0 0 0 / 2%), 0px 8px 10px 1px rgb(0 0 0 / 2%),
+    0px 3px 14px 2px rgb(0 0 0 / 2%);
 }
 
-.btn2 {
-  color: #ffefba;
-  background: linear-gradient(to right, #000000, #434343);
-  padding: 8px 22px;
-  margin-bottom: 16px;
-  font-size: 16px;
+.btn--modifier {
+  padding: 1rem 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  transition: all 0.1s ease-out;
 }
 
 .text-small {
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 hr {
-  margin: 16px 0px;
+  margin: 1.5rem 0px;
   width: 100%;
 }
 
 .forgot-pass {
-  font-size: 16px;
+  font-size: 1.5rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    left: -35rem;
+  }
+  100% {
+    left: 1.5rem;
+    opacity: 100%;
+  }
 }
