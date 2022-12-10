@@ -1,24 +1,6 @@
-/////////////////////////////////////////
-//    Milen Website color selection    //
-// Copy this for every .sass component //
-/////////////////////////////////////////
-$primary-color-black: #171717;
-$primary-color-gradient: #000000, #434343;
-
-$sec-color-bisque: #fff9db;
-$sec-color-gradient: #ffefba, #ffffff;
-
-$grey-color: #e9ecef;
-
-$website-font: "Source Serif Pro", serif;
-$header-margin: 5.5rem;
-/////////////////////////////////////////
-/// 1rem = 10px ///
-///////////////////
-
+@import "../../../styles.scss";
 // Store components are the same
 // Only difference is images
-
 .page-container {
   width: 130rem;
   padding: 1rem;
@@ -26,7 +8,6 @@ $header-margin: 5.5rem;
   padding-top: 8rem;
   display: flex;
   gap: 3.5rem;
-  background: linear-gradient(to right, $sec-color-gradient);
 }
 
 .store-content-container {
@@ -47,8 +28,7 @@ $header-margin: 5.5rem;
 .header {
   color: $grey-color;
   font-size: 4rem;
-  font-weight: bold;
-  font-family: $website-font;
+  @include CardoFont700;
 }
 
 #label {
@@ -85,7 +65,12 @@ $header-margin: 5.5rem;
   height: 55rem;
 }
 
-.btn--modifier {
+.btn-2 {
+  font-size: 2rem;
+  padding: 1rem 2.5rem;
+  grid-column: 1/3;
+  margin: auto;
+
   p {
     margin: 0;
   }
@@ -95,16 +80,9 @@ $header-margin: 5.5rem;
   height: 1.5rem;
 }
 
-.btn--modifier {
-  font-size: 2rem;
-  padding: 1rem 2.5rem;
-  grid-column: 1/3;
-  margin: auto;
-}
-
 section {
   padding: 7rem 0px;
-  border-bottom: 1px solid $grey-color;
+  border-bottom: 1px solid $primary-color-black;
 }
 
 ////////////////////
@@ -143,11 +121,6 @@ section {
   }
 }
 
-h1,
-p {
-  font-family: $website-font !important;
-}
-
 .navbar-item {
   padding: 16px 0;
   text-align: center;
@@ -155,11 +128,11 @@ p {
   font-size: 20px;
   border-bottom: 1px solid $primary-color-black;
   transition: all 0.2s ease-in-out;
-}
 
-.navbar-item:hover {
-  padding: 11px 0;
-  border-bottom: 7px solid $grey-color;
-  color: $grey-color;
-  cursor: pointer;
+  &:hover {
+    padding: 11px 0;
+    border-bottom: 7px solid $grey-color;
+    color: $grey-color;
+    cursor: pointer;
+  }
 }

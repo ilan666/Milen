@@ -1,0 +1,43 @@
+<div class="page-container">
+  <div class="row">
+    <div class="col-1">
+      <img [src]="this.product.imgPath" alt="Product image" class="img" />
+    </div>
+    <div class="col-2">
+      <h1 class="product__header">{{ this.product.name }}</h1>
+      <span class="product__price">${{ this.product.price }}</span>
+      <p class="product__desc">{{ this.product.description }}</p>
+      <section>
+        <label for="colorListRef">Pick a color</label>
+        <ul class="list" #colorListRef>
+          <ng-container *ngFor="let color of colorList">
+            <!-- Replace with original product color list -->
+            <li
+              class="color__list--item"
+              [ngStyle]="{ backgroundColor: color }"
+            ></li>
+          </ng-container>
+        </ul>
+      </section>
+      <section>
+        <label for="sizeListRef">Pick a size</label>
+        <ul class="list" #sizeListRef>
+          <ng-container *ngFor="let size of sizeList">
+            <!-- Replace with original product size list -->
+            <li class="size__list--item">{{ size }}</li>
+          </ng-container>
+        </ul>
+      </section>
+      <div class="quantity">
+        <p>Choose amount</p>
+        <button type="button" class="btn-2 btn__quantity">-</button>
+        <strong class="amount">amount</strong>
+        <button type="button" class="btn-2 btn__quantity">+</button>
+      </div>
+      <div class="flex">
+        <button class="btn-2 btn__checkout">Purchase now</button>
+        <button class="btn-2-highlight btn__cart">Add to cart</button>
+      </div>
+    </div>
+  </div>
+</div>

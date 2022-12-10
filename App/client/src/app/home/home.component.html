@@ -1,351 +1,122 @@
-<main role="main">
-  <header class="header">
-    <div class="img-container"></div>
-    <!-- <div class="header-caption">
-      <h1>Exclusive winter sale!</h1>
-      <p>Dress up with the newest winter collection</p>
-      <p class="discount">Up to 50%!</p>
+<header class="header">
+  <h1 class="header__text">
+    <p class="half1">Get yourself</p>
+    <p class="half2">Into the right gear</p>
+    <button class="btn-2-highlight">View Collection &rarr;</button>
+  </h1>
+  <img [src]="'/assets/Cloths_images/header.jpg'" class="header__img" alt="" />
+</header>
+
+<main>
+  <div class="store">
+    <div class="store__men-nav img" routerLink="men">
+      <p class="img--cap">Men</p>
+    </div>
+    <div class="store__women-nav img" routerLink="women">
+      <p class="img--cap">Women</p>
+    </div>
+    <div class="store__children-nav img" routerLink="children">
+      <p class="img--cap">Children</p>
+    </div>
+    <div class="store__accessories-nav img" routerLink="accessories">
+      <p class="img--cap">Accessories</p>
+    </div>
+    <div class="store__seasonal-nav img" routerLink="seasonal">
+      <p class="img--cap">Seasonal</p>
+    </div>
+  </div>
+  <label class="label" for="bestCollection"
+    ><p class="half1">Newest</p>
+    <p class="half2">Collection</p>
+    <button class="btn-2 collectionBtn">View all &rarr;</button></label
+  >
+  <div class="best-seller" #bestCollection>
+    <app-card [tshirt]="tshirts[1]"></app-card>
+    <app-card [tshirt]="tshirts[1]"></app-card>
+    <app-card [tshirt]="tshirts[1]"></app-card>
+    <app-card [tshirt]="tshirts[1]"></app-card>
+    <app-card [tshirt]="tshirts[1]"></app-card>
+  </div>
+</main>
+
+<aside>
+  <div class="block right">
+    <div class="block__col--1">
+      <h2 class="block__heading">
+        View our <span class="block__heading--modifier">hottest</span> new
+        collection
+        <p class="block__sub--modifier">It’ll blow your mind.</p>
+      </h2>
+      <p class="block__text">
+        Some great placeholder content for the first featurette here. Imagine
+        some exciting prose here.
+      </p>
       <button
-        class="btn--modifier"
+        class="btn-2-highlight"
         mat-ripple
         [matRippleCentered]="true"
         [matRippleUnbounded]="false"
       >
-        Get me there
+        Get me there! &rarr;
       </button>
-    </div> -->
-  </header>
-
-  <!-- Marketing messaging and featurettes
-    ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
-  <div class="container marketing">
-    <!-- Three columns of text below the carousel -->
-
-    <!-- /.row -->
-
-    <div class="store-nav">
-      <div class="men-nav img">
-        <button
-          class="btn--modifier"
-          mat-ripple
-          [matRippleCentered]="true"
-          [matRippleUnbounded]="false"
-        >
-          Men Shop
-        </button>
-      </div>
-      <div class="women-nav img">
-        <button
-          class="btn--modifier"
-          mat-ripple
-          [matRippleCentered]="true"
-          [matRippleUnbounded]="false"
-        >
-          Women Shop
-        </button>
-      </div>
-      <!-- <div class="children-nav img">
-        <button
-          class="btn--modifier"
-          mat-ripple
-          [matRippleCentered]="true"
-          [matRippleUnbounded]="false"
-        >
-          Children Shop
-        </button>
-      </div> -->
-      <div class="accessories-nav img">
-        <button
-          class="btn--modifier"
-          mat-ripple
-          [matRippleCentered]="true"
-          [matRippleUnbounded]="false"
-        >
-          Accessories Shop
-        </button>
-      </div>
     </div>
-
-    <!-- START THE FEATURETTES -->
-
-    <hr class="featurette-divider" />
-
-    <!-- <div class="row featurette">
-      <div class="col-md-7 right">
-        <h2 class="featurette-heading">
-          View our <span class="highlight-red">hottest</span> new collection
-          <p class="text-muted">It’ll blow your mind.</p>
-        </h2>
-        <p class="lead">
-          Some great placeholder content for the first featurette here. Imagine
-          some exciting prose here.
-        </p>
-        <button class="btn btn-featurette">Get me there! &rarr;</button>
-      </div>
-      <div class="col-md-5">
-        <img
-          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-          [src]="'./assets/Cloths_images/IMG-0090.jpg'"
-          width="500"
-          height="500"
-          role="img"
-          aria-label="Placeholder: 500x500"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        />
-      </div>
-    </div> -->
-
-    <!-- <hr class="featurette-divider" />
-
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2 left">
-        <h2 class="featurette-heading">
-          Oh yeah, it’s that good.
-          <span class="text-muted">See for yourself.</span>
-        </h2>
-        <p class="lead">
-          Another featurette? Of course. More placeholder content here to give
-          you an idea of how this layout would work with some actual real-world
-          content in place.
-        </p>
-        <button class="btn btn-featurette">Get me there! &rarr;</button>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <img
-          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-          [src]="'./assets/Cloths_images/IMG-0093.jpg'"
-          width="500"
-          height="500"
-          role="img"
-          aria-label="Placeholder: 500x500"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        />
-      </div>
-    </div>
-
-    <hr class="featurette-divider" />
-
-    <div class="row featurette">
-      <div class="col-md-7 right-2">
-        <h2 class="featurette-heading">
-          And lastly, this one. <span class="text-muted">Checkmate.</span>
-        </h2>
-        <p class="lead">
-          And yes, this is the last block of representative placeholder content.
-          Again, not really intended to be actually read, simply here to give
-          you a better view of what this would look like with some actual
-          content. Your content.
-        </p>
-        <button class="btn btn-featurette">Get me there! &rarr;</button>
-      </div>
-      <div class="col-md-5">
-        <img
-          class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-          [src]="'./assets/Cloths_images/IMG-0094.jpg'"
-          role="img"
-          aria-label="Placeholder: 500x500"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        />
-      </div>
-    </div> -->
-
-    <!-- <hr class="featurette-divider" /> -->
-
-    <!-- <div class="row"> -->
-    <!-- <div class="col-lg-4">
-        <svg
-          class="bd-placeholder-img rounded-circle"
-          width="140"
-          height="140"
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Placeholder: 140x140"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#777"></rect>
-          <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-        </svg>
-
-        <h2>Heading</h2>
-        <p>
-          Some representative placeholder content for the three columns of text
-          below the carousel. This is the first column.
-        </p>
-        <p><a class="btn btn-secondary" href="#">View details »</a></p>
-      </div> -->
-    <!-- /.col-lg-4 -->
-    <!-- <div class="col-lg-4">
-        <svg
-          class="bd-placeholder-img rounded-circle"
-          width="140"
-          height="140"
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Placeholder: 140x140"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#777"></rect>
-          <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-        </svg>
-
-        <h2>Heading</h2>
-        <p>
-          Another exciting bit of representative placeholder content. This time,
-          we've moved on to the second column.
-        </p>
-        <p><a class="btn btn-secondary" href="#">View details »</a></p>
-      </div> -->
-    <!-- /.col-lg-4 -->
-    <!-- <div class="col-lg-4">
-        <svg
-          class="bd-placeholder-img rounded-circle"
-          width="140"
-          height="140"
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Placeholder: 140x140"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        >
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#777"></rect>
-          <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-        </svg>
-
-        <h2>Heading</h2>
-        <p>
-          And lastly this, the third column of representative placeholder
-          content.
-        </p>
-        <p><a class="btn btn-secondary" href="#">View details »</a></p>
-      </div> -->
-    <!-- /.col-lg-4 -->
-    <!-- </div> -->
-
-    <!-- /END THE FEATURETTES -->
-  </div>
-  <!-- /.container -->
-
-  <div class="marketing-container">
-    <div class="row featurette right">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">
-          View our <span class="highlight-red">hottest</span> new collection
-          <p class="text-muted">It’ll blow your mind.</p>
-        </h2>
-        <p class="lead">
-          Some great placeholder content for the first featurette here. Imagine
-          some exciting prose here.
-        </p>
-        <button
-          class="btn--modifier btn-featurette"
-          mat-ripple
-          [matRippleCentered]="true"
-          [matRippleUnbounded]="false"
-        >
-          Get me there! &rarr;
-        </button>
-      </div>
-      <div class="col-md-5">
-        <img
-          class="bd-placeholder-img bd-placeholder-img-lg img img--modifier img-fluid mx-auto"
-          [src]="'./assets/Cloths_images/IMG-0090.jpg'"
-          width="500"
-          height="500"
-          role="img"
-          aria-label="Placeholder: 500x500"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        />
-      </div>
-    </div>
-
-    <hr class="featurette-divider" />
-
-    <div class="row featurette left">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">
-          Oh yeah, it’s that good.
-          <span class="text-muted">See for yourself.</span>
-        </h2>
-        <p class="lead">
-          Another featurette? Of course. More placeholder content here to give
-          you an idea of how this layout would work with some actual real-world
-          content in place.
-        </p>
-        <button
-          class="btn--modifier btn-featurette"
-          mat-ripple
-          [matRippleCentered]="true"
-          [matRippleUnbounded]="false"
-        >
-          Get me there! &rarr;
-        </button>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <img
-          class="bd-placeholder-img bd-placeholder-img-lg img img--modifier img-fluid mx-auto"
-          [src]="'./assets/Cloths_images/IMG-0093.jpg'"
-          width="500"
-          height="500"
-          role="img"
-          aria-label="Placeholder: 500x500"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        />
-      </div>
-    </div>
-
-    <hr class="featurette-divider" />
-
-    <div class="row featurette right-2">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">
-          And lastly, this one. <span class="text-muted">Checkmate.</span>
-        </h2>
-        <p class="lead">
-          And yes, this is the last block of representative placeholder content.
-          Again, not really intended to be actually read, simply here to give
-          you a better view of what this would look like with some actual
-          content. Your content.
-        </p>
-        <button
-          class="btn--modifier btn-featurette"
-          mat-ripple
-          [matRippleCentered]="true"
-          [matRippleUnbounded]="false"
-        >
-          Get me there! &rarr;
-        </button>
-      </div>
-      <div class="col-md-5">
-        <img
-          class="bd-placeholder-img bd-placeholder-img-lg img img--modifier img-fluid mx-auto"
-          [src]="'./assets/Cloths_images/IMG-0094.jpg'"
-          role="img"
-          aria-label="Placeholder: 500x500"
-          preserveAspectRatio="xMidYMid slice"
-          focusable="false"
-        />
-      </div>
-    </div>
+    <img class="img" [src]="'./assets/Cloths_images/IMG-0090.jpg'" />
   </div>
 
-  <!-- FOOTER -->
-  <footer class="footer-container">
-    <p class="float-right"><a href="#">Back to top</a></p>
-    <p>
-      © 2017-2022 Company, Inc. · <a href="#">Privacy</a> ·
-      <a href="#">Terms</a>
-    </p>
-  </footer>
-</main>
+  <div class="block left">
+    <div class="block__col--1">
+      <h2 class="block__heading">
+        Oh yeah, it’s that good.
+        <p class="block__sub--modifier">See for yourself.</p>
+      </h2>
+      <p class="block__text">
+        Another featurette? Of course. More placeholder content here to give you
+        an idea of how this layout would work with some actual real-world
+        content in place.
+      </p>
+      <button
+        class="btn-2-highlight"
+        mat-ripple
+        [matRippleCentered]="true"
+        [matRippleUnbounded]="false"
+      >
+        Get me there! &rarr;
+      </button>
+    </div>
+
+    <img class="img" [src]="'./assets/Cloths_images/IMG-0093.jpg'" />
+  </div>
+
+  <div class="block right-2">
+    <div class="block__col--1">
+      <h2 class="block__heading">
+        And lastly, this one.
+        <p class="block__sub--modifier">Checkmate.</p>
+      </h2>
+      <p class="block__text">
+        And yes, this is the last block of representative placeholder content.
+        Again, not really intended to be actually read, simply here to give you
+        a better view of what this would look like with some actual content.
+        Your content.
+      </p>
+      <button
+        class="btn-2-highlight"
+        mat-ripple
+        [matRippleCentered]="true"
+        [matRippleUnbounded]="false"
+      >
+        Get me there! &rarr;
+      </button>
+    </div>
+
+    <img class="img" [src]="'./assets/Cloths_images/IMG-0094.jpg'" />
+  </div>
+</aside>
+
+<footer class="footer">
+  <p class="footer__text"><a href="#">Back to top</a></p>
+  <p>
+    © 2017-2022 Company, Inc. · <a href="#">Privacy</a> ·
+    <a href="#">Terms</a>
+  </p>
+</footer>

@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,500;0,700;1,200;1,500;1,700&display=swap");
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
+@import "./mixins.scss";
 
 /* Importing Datepicker SCSS file. */
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
@@ -14,52 +16,67 @@
 $primary-color-black: #171717;
 $primary-color-gradient: #000000, #434343;
 
-$sec-color-bisque: #fff9db;
+$sec-color-bisque: #fff9e4;
 $sec-color-gradient: #ffefba, #ffffff;
 
-$grey-color: #e9ecef;
-
-$website-font: "Source Serif Pro", serif;
-$header-margin: 5.5rem;
+$grey-color: #ced4da;
+$text-color: #343a40;
+$text-color-white: aliceblue;
+$text-color-light: #868e96;
+$header-margin: 6rem;
 /////////////////////////////////////////
 /// 1rem = 10px ///
 ///////////////////
 
-html,
-body {
-  height: 100%;
-  font-size: 62.5%;
-}
-body {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  color: #343a40;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  color: $text-color;
+  font-size: 1.6rem;
   background: linear-gradient(to right, $primary-color-gradient);
+  @include MulishFont500;
 }
 
-.img {
-  border-radius: 0.5rem;
-  background-size: cover;
+h1 {
+  @include CardoFont400Italic;
 }
 
-body,
-.mat-typography,
-h1,
-h2,
+h2 {
+  @include CardoFont400;
+}
+
 h3,
 h4,
 h5,
-h6,
-p {
-  font-family: $website-font !important;
+h6 {
+  @include CardoFont700;
+}
+
+.img {
+  background-size: cover;
+  max-width: 100%;
 }
 
 .mat-expansion-indicator::after {
-  color: $sec-color-bisque;
+  color: $primary-color-black;
 }
 
-.btn--modifier {
+.btn-2 {
   background-color: transparent;
   border: 1px solid $primary-color-black;
   color: $primary-color-black;
@@ -68,19 +85,74 @@ p {
   height: max-content;
   border-radius: 5px;
   transition: all 0.1s ease-in-out;
+  font-size: 1.6rem;
+  @include MulishFont500;
 
   &:hover {
     background-color: $primary-color-black;
-    border-color: $grey-color;
-    color: $grey-color;
+    color: white;
     transform: translateY(-3px);
-    box-shadow: 0px 8px 9px -5px rgb(0 0 0 / 20%),
-      0px 8px 10px 1px rgb(0 0 0 / 0%), 0px 3px 14px 2px rgb(0 0 0 / 8%);
+    box-shadow: 0px 5px 10px -2px rgb(0 0 0 / 50%);
   }
 
   &:active {
-    background: lighten($color: $primary-color-black, $amount: 10);
+    background: lighten($color: $primary-color-black, $amount: 25);
     transform: translateY(-1px);
-    box-shadow: 0px 1px 10px 0px rgba(73, 80, 87, 0.4);
+    box-shadow: none;
+  }
+}
+
+.btn-2-highlight {
+  background-color: $primary-color-black;
+  border: 1px solid $text-color-white;
+  color: $text-color-white;
+  padding: 16px 32px;
+  width: max-content;
+  height: max-content;
+  border-radius: 5px;
+  transition: all 0.1s ease-in-out;
+  font-size: 1.6rem;
+  @include MulishFont500;
+
+  &:hover {
+    background-color: $primary-color-black;
+    color: $text-color-white;
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 10px -2px rgb(0 0 0 / 50%);
+  }
+
+  &:active {
+    background: lighten($color: $primary-color-black, $amount: 25);
+    transform: translateY(-1px);
+    box-shadow: none;
+  }
+}
+
+.nav-popup {
+  background-color: $sec-color-bisque;
+  padding: 5rem 3rem;
+  color: $text-color;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 0.5rem;
+  animation: fadeIn 0.5s ease-in-out;
+
+  position: fixed;
+  top: $header-margin + 1.5rem;
+  right: 1.5rem;
+  z-index: 20;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+    top: $header-margin;
+  }
+  100% {
+    opacity: 100%;
+    top: $header-margin + 1.5rem;
   }
 }

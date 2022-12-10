@@ -1,0 +1,53 @@
+@mixin CardoFont400 {
+  font-family: "Cardo", "Source Serif Pro" !important;
+  font-weight: 400 !important;
+  font-style: unset !important;
+}
+
+@mixin CardoFont700 {
+  font-family: "Cardo", "Source Serif Pro" !important;
+  font-weight: 700 !important;
+  font-style: unset !important;
+}
+
+@mixin CardoFont400Italic {
+  font-family: "Cardo", "Source Serif Pro" !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+}
+
+@mixin MulishFont200 {
+  font-family: "Mulish", "Serif" !important;
+  font-weight: 200 !important;
+  font-style: unset !important;
+}
+@mixin MulishFont200Italic {
+  font-family: "Mulish", "Serif" !important;
+  font-weight: 200 !important;
+  font-style: italic !important;
+}
+@mixin MulishFont500 {
+  font-family: "Mulish", "Serif" !important;
+  font-weight: 500 !important;
+  font-style: unset !important;
+}
+@mixin MulishFont500Italic {
+  font-family: "Mulish", "Serif" !important;
+  font-weight: 200 !important;
+  font-style: italic !important;
+}
+@mixin MulishFont700 {
+  font-family: "Mulish", "Serif" !important;
+  font-weight: 700 !important;
+  font-style: unset !important;
+}
+@mixin MulishFont200Italic {
+  font-family: "Mulish", "Serif" !important;
+  font-weight: 700 !important;
+  font-style: italic !important;
+}
+
+@mixin backgroundImgHighlight($url: "") {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url($url);
+}

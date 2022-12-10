@@ -1,0 +1,14 @@
+<div
+  class="account nav-popup mat-elevation-z8"
+  *ngIf="currentUser$ | async"
+  [ngClass]="{ fadeOut: this.fadeOut }"
+>
+  <h2>Hello, {{ user.username }}</h2>
+  <ul class="account__actions">
+    <li><button class="account__action">My Profile</button></li>
+    <li><button class="account__action">My Orders</button></li>
+    <li><button class="account__action">My Coupons</button></li>
+    <li><button class="account__action">Recently Viewd</button></li>
+    <li><button class="account__action">Log Out</button></li>
+  </ul>
+</div>

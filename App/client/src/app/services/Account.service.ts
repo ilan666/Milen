@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, ReplaySubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { User } from '../models/user';
+import { User } from '../Shared/models/user';
 
 @Injectable({
   providedIn: 'root',
@@ -11,6 +11,7 @@ export class AccountService {
   baseUrl = environment.apiUrl;
   private CurrentUserSource$ = new ReplaySubject<User>(1);
   currentUser$ = this.CurrentUserSource$.asObservable();
+  user: User;
 
   constructor(private http: HttpClient) {}
 
@@ -21,7 +22,7 @@ export class AccountService {
         if (res) {
           this.setCurrentUser(user);
         }
-
+        this.user = res;
         return user;
       })
     );
@@ -42,5 +43,9 @@ export class AccountService {
         return user;
       })
     );
+  }
+
+  getUser() {
+    return this.user;
   }
 }

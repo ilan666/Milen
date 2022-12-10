@@ -4,25 +4,30 @@
   (ngSubmit)="login()"
   autocomplete="off"
 >
-  <div class="login-container" #loginDisplay>
-    <h2 class="header">Log in</h2>
-    <div class="login-details-container">
+  <div
+    class="login nav-popup mat-elevation-z8"
+    [ngClass]="{ fadeOut: this.fadeOut }"
+  >
+    <h2 class="login__header">Log in</h2>
+    <div class="login__inputs">
       <input
-        class="input"
+        class="login__input--modifier"
         formControlName="email"
         type="email"
         placeholder="Email here"
+        autocomplete="off"
       />
       <input
-        class="input"
+        class="login__input--modifier"
         formControlName="password"
         type="password"
         placeholder="Password here"
+        autocomplete="off"
       />
     </div>
     <button
       type="submit"
-      class="btn--modifier"
+      class="btn-2-highlight"
       mat-ripple
       [matRippleCentered]="true"
       [matRippleUnbounded]="false"
@@ -31,7 +36,7 @@
     </button>
     <hr />
     <button
-      class="btn--modifier"
+      class="btn-2"
       routerLink="/register"
       mat-ripple
       [matRippleCentered]="true"

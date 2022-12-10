@@ -1,11 +1,11 @@
 <form [formGroup]="registerForm" (ngSubmit)="register()" autocomplete="off">
-  <div class="container">
+  <div class="register">
     <h1>Register</h1>
-    <div class="input-container">
+    <div class="register__inputs">
       <div class="field">
         <input
           type="text"
-          class="input"
+          class="register__input--modifier"
           formControlName="firstName"
           placeholder="First name"
         />
@@ -31,7 +31,7 @@
       <div class="field">
         <input
           type="text"
-          class="input"
+          class="register__input--modifier"
           formControlName="lastName"
           placeholder="Last name"
         />
@@ -56,7 +56,7 @@
       <div class="field">
         <input
           type="email"
-          class="input"
+          class="register__input--modifier"
           formControlName="email"
           placeholder="Email"
         />
@@ -98,7 +98,7 @@
       <div class="field">
         <input
           type="email"
-          class="input"
+          class="register__input--modifier"
           formControlName="confirmEmail"
           placeholder="Confirm Email"
         />
@@ -145,7 +145,7 @@
       <div class="field">
         <input
           type="password"
-          class="input"
+          class="register__input--modifier"
           formControlName="password"
           placeholder="Password"
         />
@@ -187,7 +187,7 @@
       <div class="field">
         <input
           type="password"
-          class="input"
+          class="register__input--modifier"
           formControlName="confirmPassword"
           placeholder="Confirm Password"
         />
@@ -229,8 +229,6 @@
         >
       </div>
     </div>
-    <button class="btn--modifier" [disabled]="!registerForm.valid">
-      Submit
-    </button>
+    <button class="btn-2" [disabled]="!registerForm.valid">Submit</button>
   </div>
 </form>

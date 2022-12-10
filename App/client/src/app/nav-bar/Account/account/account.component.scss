@@ -1,0 +1,59 @@
+// Importing style variables
+@import "../../../../styles.scss";
+
+.account {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 30rem;
+  padding: 0;
+
+  &::after {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    background-color: $sec-color-bisque;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    position: absolute;
+    top: -1rem;
+    left: 9.2rem;
+  }
+}
+
+.account__actions {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  .account__action {
+    width: 100%;
+    padding: 2rem 0;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+      background-color: darken($color: $sec-color-bisque, $amount: 10);
+      border: 1px solid $grey-color;
+      padding: calc(2rem - 1px), 0;
+    }
+  }
+}
+
+h2 {
+  margin: 2rem 0;
+}
+
+.fadeOut {
+  animation: fadeOut 0.3s ease-out;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
+    top: $header-margin + 1.5rem;
+  }
+  100% {
+    opacity: 0%;
+    top: $header-margin;
+  }
+}

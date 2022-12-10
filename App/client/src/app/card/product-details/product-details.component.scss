@@ -1,0 +1,96 @@
+// Importing style variables
+@import "../../../styles.scss";
+
+.page-container {
+  max-width: 130rem;
+  min-height: 100vh;
+  display: block;
+  margin: 0 auto;
+  margin-top: $header-margin;
+  background-color: $sec-color-bisque;
+}
+
+.row {
+  display: flex;
+
+  .col-1 {
+    width: 60%;
+    padding: 5rem;
+  }
+  .col-2 {
+    width: 40%;
+    padding: 5rem 2rem;
+    position: relative;
+  }
+}
+
+.img {
+  max-width: 100%;
+}
+
+.product__header {
+  font-size: 4rem;
+  display: inline-block;
+}
+
+.product__desc {
+  font-size: 2rem;
+}
+
+.product__price {
+  font-size: 2.5rem;
+  font-weight: bold;
+
+  position: absolute;
+  right: 5rem;
+  top: 7.5rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+  margin: 3rem 0;
+
+  .color__list--item {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+  }
+}
+
+section {
+  margin: 2rem 0rem;
+  padding: 2rem 0rem;
+  border-top: 1px solid $grey-color;
+}
+
+.quantity {
+  border: 1px solid $grey-color;
+  border-radius: 5px;
+  text-align: center;
+  max-width: fit-content;
+  padding: 3rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+
+  .amount {
+    margin: 0 2rem;
+  }
+
+  .btn__quantity {
+    padding: 1rem 3rem;
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+
+  .btn__cart,
+  .btn__checkout {
+    min-width: 40%;
+  }
+}

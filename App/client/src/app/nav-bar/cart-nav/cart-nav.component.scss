@@ -1,0 +1,57 @@
+// Importing style variables
+@import "../../../styles.scss";
+
+.cart {
+  height: 60vh;
+  width: 85vh;
+  padding: 5rem;
+
+  &::after {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    background-color: $sec-color-bisque;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    position: absolute;
+    top: -1rem;
+    right: 7.3rem;
+  }
+
+  .cart__list {
+    width: max-content;
+    height: 80%;
+  }
+
+  .cart__nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+
+    .btn--modifier {
+      width: 40%;
+    }
+  }
+
+  #pos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.fadeOut {
+  animation: fadeOut 0.3s ease-out;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
+    top: $header-margin + 1.5rem;
+  }
+  100% {
+    opacity: 0%;
+    top: $header-margin;
+  }
+}

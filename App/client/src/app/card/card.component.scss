@@ -1,38 +1,39 @@
-/////////////////////////////////////////
-//    Milen Website color selection    //
-// Copy this for every .sass component //
-/////////////////////////////////////////
-$primary-color-black: #171717;
-$primary-color-gradient: #000000, #434343;
+// Importing style variables
+@import "../../styles.scss";
 
-$sec-color-bisque: #fff9db;
-$sec-color-gradient: #ffefba, #ffffff;
-
-$grey-color: #e9ecef;
-$text-color: #343a40;
-
-$website-font: "Source Serif Pro", serif;
-$header-margin: 5.5rem;
-/////////////////////////////////////////
-/// 1rem = 10px ///
-///////////////////
-
-.example-card {
+.card {
   max-width: 40rem;
-  padding: 0;
+  padding: 1rem;
   border-radius: 0.5rem;
+  border: none;
   box-shadow: none;
-  background: none;
   transition: all 0.2s ease-in-out;
   position: relative;
-  background-color: $grey-color;
-}
+  background: linear-gradient(
+    to bottom,
+    $grey-color,
+    $grey-color,
+    #434343,
+    #000
+  );
+  color: $text-color-white;
+  @include MulishFont500;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 9px -5px rgb(0 0 0 / 20%),
+      0px 8px 10px 1px rgb(0 0 0 / 0%), 0px 3px 14px 2px rgb(0 0 0 / 8%);
+    cursor: pointer;
 
-.example-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0px 8px 9px -5px rgb(0 0 0 / 20%),
-    0px 8px 10px 1px rgb(0 0 0 / 0%), 0px 3px 14px 2px rgb(0 0 0 / 8%);
-  cursor: pointer;
+    .btn-2 {
+      background-color: $primary-color-black;
+      border-color: $text-color-white;
+      color: $text-color-white;
+
+      &:hover {
+        background: lighten($color: $primary-color-black, $amount: 10);
+      }
+    }
+  }
 }
 
 mat-card-content {
@@ -46,30 +47,23 @@ h4 {
 .img {
   height: 25rem;
   border-radius: 0.5rem;
-  background-image: url(/assets/Cloths_images/IMG-0090.jpg);
+  // background-image: url(/assets/Cloths_images/IMG-0090.jpg);
   background-size: cover;
   margin: 0 !important;
 }
 
-.btn--modifier {
+.btn-2 {
   width: 100%;
-  background-color: inherit;
   text-transform: uppercase;
-  font-family: $website-font;
 }
 
-.sub-header {
+.card__sub-header {
   margin: 0;
+  @include MulishFont700;
 }
 
 .star {
-  height: 16px;
-}
-
-#stars {
-  span {
-    margin-left: 4px;
-  }
+  height: 1.6rem;
 }
 
 #stars {
@@ -77,4 +71,9 @@ h4 {
   font-size: 13px;
   display: flex;
   gap: 1px;
+  color: $sec-color-bisque;
+
+  span {
+    margin-left: 4px;
+  }
 }

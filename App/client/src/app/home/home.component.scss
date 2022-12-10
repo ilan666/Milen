@@ -1,24 +1,10 @@
-/////////////////////////////////////////
-//    Milen Website color selection    //
-// Copy this for every .sass component //
-/////////////////////////////////////////
-$primary-color-black: #171717;
-$primary-color-gradient: #000000, #434343;
-
-$sec-color-bisque: #fff9db;
-$sec-color-gradient: #ffefba, #ffffff;
-
-$grey-color: #e9ecef;
-$text-color: #343a40;
-
-$website-font: "Source Serif Pro", serif;
-$header-margin: 5.5rem;
-/////////////////////////////////////////
-/// 1rem = 10px ///
-///////////////////
+// Importing style variables
+@import "../../styles.scss";
 
 main {
-  background: linear-gradient(to right, $primary-color-gradient);
+  background: linear-gradient(to bottom, $sec-color-gradient, #fde390);
+  padding: 15rem 5rem;
+  overflow-x: hidden;
 }
 
 .row {
@@ -30,76 +16,97 @@ main {
 ////////////////////
 
 header {
-  margin-bottom: 15rem;
   position: relative;
+  background: linear-gradient(to bottom, $primary-color-gradient, #ffefba);
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10rem;
+  padding-top: 6rem;
+  height: 100vh;
 }
 
-// .header-caption {
-//   top: 50%;
-//   transform: translate(0, -50%);
-//   left: 15rem;
-//   max-width: 50rem;
-//   min-height: 25rem;
-//   max-height: 40rem;
-//   padding: 3rem 6rem;
+.header__img {
+  width: 70rem;
+  align-self: center;
+  margin-bottom: 10rem;
+  opacity: 70%;
+}
 
-//   position: absolute;
+.header__text {
+  font-size: 8rem;
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: -3px;
+  transform: translateY(20%);
+  @include MulishFont700;
+  //   #fff9db
+  // #fff9db
+  // #fff9db
 
-//   background-color: rgba($sec-color-bisque, 0.8);
-//   color: $text-color;
+  &::after {
+    content: "";
+    background-color: rgba($color: $primary-color-black, $alpha: 0.9);
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    bottom: 20rem;
+    right: 25rem;
+  }
 
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   align-items: center;
+  &::before {
+    content: "";
+    background-color: rgba($color: $sec-color-bisque, $alpha: 0.7);
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    bottom: 30rem;
+    right: 20rem;
+  }
 
-//   animation: fadeIn 1s ease-out;
-// }
+  .half1 {
+    color: $text-color-light;
+    animation: fadeInLeft 1s ease-in-out;
+    transform: translateX(5%);
+  }
 
-// .header-caption {
-//   h1{
-//     text-transform: uppercase;
-//   font-weight: 700;
-//   margin: 0;
-//   }
-//   p{
-//     font-size: 1.5rem;
-//   }
-//   button{
-//     text-transform: uppercase;
-//     font-size: 1.5rem;
-//     margin-top: 4rem;
-//   }
-// }
-//
-// .discount {
-//   font-weight: 700;
-//   font-size: 3.5rem !important;
-//   color: red;
-//   margin-top: 2rem;
-// }
-
-.img-container {
-  height: 75vh;
-  background-image: linear-gradient(
-      rgba($primary-color-black, 0.5),
-      rgba($primary-color-black, 0.5)
-    ),
-    url(/assets/Cloths_images/header.jpg);
-  margin-top: $header-margin;
-  background-size: 100% 64rem;
+  .half2 {
+    background-image: linear-gradient(
+      to left bottom,
+      #fde390,
+      #ffffff,
+      #fde390,
+      #ffffff,
+      #fde390
+    );
+    background-clip: text;
+    color: transparent;
+    animation: fadeInRight 1s ease-in-out;
+    transform: translateX(-5%);
+  }
 }
 
 // Header Caption Animation //
-@keyframes fadeIn {
+@keyframes fadeInLeft {
   0% {
     opacity: 0%;
-    transform: translateY(-40%);
+    transform: translateX(-5%);
   }
 
   100% {
     opacity: 100%;
-    transform: translateY(-50%);
+    transform: translateX(5%);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0%;
+    transform: translateX(5%);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateX(-5%);
   }
 }
 
@@ -107,132 +114,246 @@ header {
 // End header Section //
 ////////////////////////
 
-/* MARKETING CONTENT
--------------------------------------------------- */
+//////////////////////////////////
+/// Store navigation templates ///
+//////////////////////////////////
+.store {
+  display: flex;
+  gap: 1.5rem;
+}
 
-/* Center align the text within the three columns below the carousel */
-.marketing {
-  .col-lg-4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
+.store__men-nav {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://images.squarespace-cdn.com/content/v1/5ac2a46ac258b40326620fb5/1565740444632-4SVEW0VTCOC1MJK8F43Q/ke17ZwdGBToddI8pDm48kNO2SymwcR0CNt03aX8zdCd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmyh-8_5GJNvrfz4o4yOfLS6zQbzUiTKHw9oGJVKerm66NTpMeMsHjVpXC93GFBavO/nyc-photographers-male-model-test-10031.jpg);
+  transform: translateY(-2.5rem);
 
-    p {
-      margin-right: 0.75rem;
-      margin-left: 0.75rem;
-    }
+  &:hover {
+    @include backgroundImgHighlight(
+      $url:
+        "https://images.squarespace-cdn.com/content/v1/5ac2a46ac258b40326620fb5/1565740444632-4SVEW0VTCOC1MJK8F43Q/ke17ZwdGBToddI8pDm48kNO2SymwcR0CNt03aX8zdCd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmyh-8_5GJNvrfz4o4yOfLS6zQbzUiTKHw9oGJVKerm66NTpMeMsHjVpXC93GFBavO/nyc-photographers-male-model-test-10031.jpg"
+    );
   }
 }
 
-/* Featurettes
-------------------------- */
-.right {
-  background: linear-gradient(to right, #fff9db, #93aba2);
+.store__women-nav {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://th.bing.com/th/id/OIP.POSpbxx1R4Hl6QohI_b5EwHaLG?pid=ImgDet&rs=1);
+
+  &:hover {
+    @include backgroundImgHighlight(
+      $url:
+        "https://th.bing.com/th/id/OIP.POSpbxx1R4Hl6QohI_b5EwHaLG?pid=ImgDet&rs=1"
+    );
+  }
 }
 
-.right-2 {
-  background: linear-gradient(to right, #fff9db, #dbe5b5);
+.store__accessories-nav {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://th.bing.com/th/id/OIP.OW5m-GtvZFwzs8dV5ytWggHaDt?pid=ImgDet&rs=1);
+  &:hover {
+    @include backgroundImgHighlight(
+      $url:
+        "https://th.bing.com/th/id/OIP.OW5m-GtvZFwzs8dV5ytWggHaDt?pid=ImgDet&rs=1"
+    );
+  }
 }
 
-.left {
-  background: linear-gradient(to left, #fff9db, #cde0c0);
+.store__children-nav {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/assets/HomeImages/children-nav.jpg);
+  transform: translateY(-2.5rem);
+  &:hover {
+    @include backgroundImgHighlight(
+      $url: "/assets/HomeImages/children-nav.jpg"
+    );
+  }
 }
 
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-weight: bold;
-  line-height: 1;
-  letter-spacing: -3px;
+.store__seasonal-nav {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/assets/HomeImages/seasonal-nav.jpg);
+  transform: translateY(-2.5rem);
+  &:hover {
+    @include backgroundImgHighlight(
+      $url: "/assets/HomeImages/seasonal-nav.jpg"
+    );
+  }
 }
 
-.store-nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50rem 50rem;
-  gap: 1.5rem;
-  margin-bottom: 15rem;
-}
-
-.men-nav {
-  background-image: url(https://images.squarespace-cdn.com/content/v1/5ac2a46ac258b40326620fb5/1565740444632-4SVEW0VTCOC1MJK8F43Q/ke17ZwdGBToddI8pDm48kNO2SymwcR0CNt03aX8zdCd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmyh-8_5GJNvrfz4o4yOfLS6zQbzUiTKHw9oGJVKerm66NTpMeMsHjVpXC93GFBavO/nyc-photographers-male-model-test-10031.jpg);
-}
-
-.women-nav {
-  background-image: url(https://th.bing.com/th/id/OIP.POSpbxx1R4Hl6QohI_b5EwHaLG?pid=ImgDet&rs=1);
-}
-
-// .children-nav {
-//   background-image: url(https://th.bing.com/th/id/OIP.MmRbh-3BIe3mIb0fAdevfwHaKp?pid=ImgDet&rs=1);
-// }
-
-.accessories-nav {
-  background-image: url(https://th.bing.com/th/id/OIP.OW5m-GtvZFwzs8dV5ytWggHaDt?pid=ImgDet&rs=1);
-  grid-column: 1/3;
-}
-
-.featurette {
-  padding: 5rem 6rem;
-  margin-bottom: 15rem;
-}
-
-.img--modifier {
-  width: 50rem;
-  height: 50rem;
-}
-
-.col-md-7 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.img {
+.store__men-nav,
+.store__women-nav,
+.store__accessories-nav,
+.store__seasonal-nav,
+.store__children-nav {
   position: relative;
-  .btn--modifier {
+  width: 20%;
+  height: 70vh;
+  transition: all 0.2s ease-in-out;
+
+  .img--cap {
+    color: $sec-color-bisque;
+    text-shadow: 0px 0px 2px black;
     position: absolute;
-    top: 80%;
-    right: 50%;
-    transform: translateX(50%);
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 3rem;
+    top: 1rem;
+    left: 1rem;
+    @include MulishFont500;
   }
 
   &:hover {
-    .btn--modifier {
-      background-color: $primary-color-black;
-      border-color: $grey-color;
-      color: $grey-color;
-
-      &:hover {
-        background: lighten($color: $primary-color-black, $amount: 10);
-      }
-    }
+    box-shadow: 0px 7px 9px -4px rgba(0, 0, 0, 0.3),
+      0px 14px 21px 2px rgba(0, 0, 0, 0.24),
+      0px 5px 26px 4px rgba(0, 0, 0, 0.22);
+    transform: translateY(-3px);
+    cursor: pointer;
   }
 }
 
-.text-muted {
-  font-size: 4rem;
+.store__men-nav,
+.store__seasonal-nav,
+.store__children-nav {
+  &:hover {
+    transform: translateY(-2.8rem);
+  }
 }
 
-.btn-featurette {
-  width: max-content;
-  font-size: 2rem;
+.label {
+  width: 100%;
+  font-size: 9rem;
+  margin-top: 20rem;
+  margin-bottom: 5rem;
+  line-height: 0.8;
+  text-align: center;
+  text-transform: upppercase();
+  position: relative;
+  @include MulishFont700;
+
+  .half1 {
+    background-image: linear-gradient(
+      to left bottom,
+      $primary-color-black,
+      #fde390
+    );
+    background-clip: text;
+    color: transparent;
+    animation: fadeInLeft 1s ease-in-out;
+    transform: translateX(5%);
+  }
+
+  .half2 {
+    background-image: linear-gradient(
+      to left bottom,
+      #fde390,
+      $primary-color-black
+    );
+    background-clip: text;
+    color: transparent;
+    animation: fadeInRight 1s ease-in-out;
+    transform: translateX(-5%);
+  }
+
+  .collectionBtn {
+    position: absolute;
+    bottom: -2rem;
+    right: 5rem;
+  }
 }
 
-.highlight-red {
-  color: #dc2626;
+.best-seller {
+  display: flex;
+  gap: 2rem;
 }
 
-.footer-container {
+//////////////////////////
+/// End store template ///
+//////////////////////////
+
+///////////////////////
+/// Blocks template ///
+///////////////////////
+
+// Blocks background color seperated //
+.right {
+  // background: linear-gradient(to right, #fff9db, #93aba2);
+  background-color: transparent;
+  color: $text-color-white;
+}
+
+.right-2 {
+  // background: linear-gradient(to right, #fff9db, #dbe5b5);
+  background-color: transparent;
+  color: $text-color-white;
+}
+
+// Modifier for the block opposite direction //
+.left {
+  // background: linear-gradient(to left, #fff9db, #cde0c0);
+  flex-direction: row-reverse;
+  background: linear-gradient(to right, $sec-color-gradient);
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.block {
+  display: flex;
+  padding: 5rem 10rem;
+  height: 100vh;
+  gap: 10%;
+
+  .block__col--1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 50%;
+  }
+
+  .img {
+    max-width: 50%;
+  }
+
+  .block__heading {
+    font-size: 5rem;
+    letter-spacing: -2px;
+
+    .block__heading--modifier {
+      color: red;
+    }
+
+    .block__sub--modifier {
+      font-size: 4rem;
+      color: $text-color-light;
+    }
+  }
+
+  .block__text {
+    font-size: 1.6rem;
+  }
+}
+
+//////////////////////////
+/// End block template ///
+//////////////////////////
+
+//////////////
+/// Footer ///
+//////////////
+
+.footer {
   margin-top: 3rem;
   background: linear-gradient(to right, $sec-color-gradient);
   padding: 2rem;
 }
 
-.footer-container {
+.footer {
   p:last-child {
     margin: 0;
   }
 }
+
+//////////////////
+/// End footer ///
+//////////////////
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 

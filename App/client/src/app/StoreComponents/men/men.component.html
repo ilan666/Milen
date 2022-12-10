@@ -1,145 +1,47 @@
+<header>
+  <div class="header-container">
+    <h1 class="header">Men</h1>
+    <p class="description">Make an <strong id="label">Impact</strong></p>
+  </div>
+</header>
 <div class="page-container">
-  <div class="store-content-container">
-    <header>
-      <div class="header-container">
-        <h1 class="header">Men</h1>
-        <p class="description">Make an <strong id="label">Impact</strong></p>
-      </div>
-    </header>
-    <nav>
-      <ul class="nav">
-        <li class="navbar-item">T-Shirt</li>
-        <li class="navbar-item">Jeans</li>
-        <li class="navbar-item">Shoes</li>
-        <li class="navbar-item">Example</li>
-        <li class="navbar-item">Example</li>
-        <li class="navbar-item">Example</li>
-        <li class="navbar-item">Example</li>
-        <li class="navbar-item">Example</li>
+  <div class="toolbox">
+    <div class="toolbox__container">
+      <p class="aside__header">Quick actions</p>
+      <hr />
+      <ul class="category__list">
+        <li class="category__list--item">T-Shirts</li>
+        <li class="category__list--item">Jeans</li>
+        <li class="category__list--item">Boots</li>
+        <li class="category__list--item">Coats</li>
+        <li class="category__list--item">Jackets</li>
       </ul>
-    </nav>
+    </div>
+  </div>
+  <div class="store-content-container">
     <section class="store-content">
+      <h1>T-Shirts</h1>
+      <button class="btn-2">View all &rarr;</button>
       <!-- Content goes here -->
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <button
-        class="btn--modifier"
-        mat-ripple
-        [matRippleCentered]="true"
-        [matRippleUnbounded]="false"
-      >
-        See all T-Shirts
-        <p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="arrow-down"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
-            />
-          </svg>
-        </p>
-      </button>
-      <div class="img-right"></div>
-      <div class="desc-container-right">
-        <h1>T-shirts</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-          animi aut sit quas nostrum, neque officiis, sed impedit possimus ipsa
-          error corporis ipsam totam explicabo alias consequatur eos! Placeat,
-          eum?
-        </p>
-      </div>
+      <ng-container *ngFor="let item of tshirts">
+        <app-card [tshirt]="item"></app-card>
+      </ng-container>
     </section>
     <section class="store-content">
+      <h1>Jeans</h1>
+      <button class="btn-2">View all &rarr;</button>
       <!-- Content goes here -->
-      <div class="img-left"></div>
-      <div class="desc-container-left">
-        <h1>Jeans</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-          animi aut sit quas nostrum, neque officiis, sed impedit possimus ipsa
-          error corporis ipsam totam explicabo alias consequatur eos! Placeat,
-          eum?
-        </p>
-      </div>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <button
-        class="btn--modifier"
-        mat-ripple
-        [matRippleCentered]="true"
-        [matRippleUnbounded]="false"
-      >
-        See all Jeans
-        <p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="arrow-down"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
-            />
-          </svg>
-        </p>
-      </button>
+      <ng-container *ngFor="let item of tshirts">
+        <app-card [tshirt]="item"></app-card>
+      </ng-container>
     </section>
     <section class="store-content">
+      <h1>Coats</h1>
+      <button class="btn-2">View all &rarr;</button>
       <!-- Content goes here -->
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <button
-        class="btn--modifier"
-        mat-ripple
-        [matRippleCentered]="true"
-        [matRippleUnbounded]="false"
-      >
-        See all Shoes
-        <p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="arrow-down"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
-            />
-          </svg>
-        </p>
-      </button>
-      <div class="img-right"></div>
-      <div class="desc-container-right">
-        <h1>Shoes</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-          animi aut sit quas nostrum, neque officiis, sed impedit possimus ipsa
-          error corporis ipsam totam explicabo alias consequatur eos! Placeat,
-          eum?
-        </p>
-      </div>
+      <ng-container *ngFor="let item of tshirts">
+        <app-card [tshirt]="item"></app-card>
+      </ng-container>
     </section>
   </div>
 </div>

@@ -1,0 +1,47 @@
+// Importing style variables
+@import "../../../styles.scss";
+
+.panel {
+  background-color: transparent;
+  width: 25rem;
+  box-shadow: none;
+  letter-spacing: 3px;
+}
+
+.panel-title {
+  color: $text-color;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+
+.content {
+  animation: textFadeIn 0.5s ease-in-out;
+  position: fixed;
+  top: $header-margin + 2rem;
+  width: fit-content;
+  left: 1.5rem;
+  height: 89vh;
+  background: linear-gradient(to bottom, $sec-color-gradient);
+  border-radius: 5px;
+  z-index: 20;
+}
+
+.matopen:hover {
+  background: darken($color: $sec-color-bisque, $amount: 5);
+}
+
+.fadeOut {
+  animation: fadeOut 0.3s ease-out;
+}
+
+@keyframes textFadeIn {
+  0% {
+    opacity: 0%;
+    left: 0rem;
+  }
+
+  100% {
+    opacity: 100%;
+    left: 1.5rem;
+  }
+}

@@ -1,6 +1,10 @@
-<mat-card class="example-card mat-elevation-z8" routerLink="product-details">
+<mat-card
+  class="card mat-elevation-z8"
+  (click)="selectProduct()"
+  *ngIf="tshirt"
+>
   <mat-card-title-group>
-    <div mat-card-xl-image class="img"></div>
+    <img mat-card-xl-image [src]="this.tshirt.imgPath" class="img" />
   </mat-card-title-group>
   <mat-card-content>
     <div id="stars">
@@ -77,11 +81,13 @@
 
       <span>Reviews</span>
     </div>
-    <h1 class="sub-header">(T-Shirt)</h1>
-    <p class="price">(Price)</p>
+    <h1 class="card__sub-header">{{ this.tshirt.name }}</h1>
+    <p>{{ this.tshirt.description }}</p>
+    <p>{{ this.tshirt.price }}</p>
+    <p>{{ this.tshirt.prefix }}</p>
   </mat-card-content>
   <button
-    class="btn--modifier"
+    class="btn-2"
     (click)="$event.stopPropagation()"
     mat-ripple
     [matRippleCentered]="true"
